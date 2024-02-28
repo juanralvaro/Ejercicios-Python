@@ -51,8 +51,8 @@ print(cadena) #Error porque no se puede modificar un único caracter. """
 
 Crea un cuento modelo que incluya al menos 10 datos diferentes personalizados del niño o niña al que va dirigido el cuento. La declaración de variables debe ser en bloque. Ejemplo:
 
-ciudad, year, nombre_niño = "Bogotá", 2021, "Nicolás"
-print("Amanece en " + ciudad + "en el año " + str(year)+ "..." ) #El naming de una variable no puede empezar con un número, ni con un caracter especial a excepción de _ """
+    ciudad, year, nombre_niño = "Bogotá", 2021, "Nicolás"
+    print("Amanece en " + ciudad + "en el año " + str(year)+ "..." ) #El naming de una variable no puede empezar con un número, ni con un caracter especial a excepción de _ """
 
 """print("Habia una vez una niña llamada" + nombre +". Esta niña nacio en " + ciudad + 
       ". En el año"  + str(año) + "su familia se mudó a otra ciudad"  + " y ella no quiso irse" + 
@@ -60,6 +60,12 @@ print("Amanece en " + ciudad + "en el año " + str(year)+ "..." ) #El naming de 
       "\nAsí que decidió quedarse y buscarle a él para que la llevara de vuelta a casa.")"""
 
 #TRABAJANDO CON CADENA DE CARACTERES
+
+""" cadena[1:2] # a una sección de la cadena, en la sección se incluye el primer índice y se excluye el segundo
+cadena[1:] # desde un caracter hasta el final
+cadena[:3] # desde el principio hasta un caracter
+cadena[-1] # A la última posición
+cadena[-2] # A la penúltima posición """
 
 """ nueva_cadena = "soy una nueva variable"
 
@@ -92,17 +98,45 @@ TIPOS --->
     age = 35
     mensaje = f"Hola mi nombre es {name} y mi edad es {age}"
 
+4 - .format : Alternativa más antigua para formatear cadenas. Surgió con Python1
+    El método format() se utiliza para construir cadenas que contienen valores de variables.
+    La sintaxis básica es:    
+    mensaje = "Hola {} y su edad es {}".format(name, age)  #{} -> Marcadores
+
+Otros métodos avanzados: 
+json.dumps()
+xml.etree.ElementTree.dump()
+
 """
+
+""" #Casting de datos
 numero_entero = int(3.14278974)
 numero_entero_dos = "El numero entero es " +  str(numero_entero)
-print(numero_entero_dos)
+#print(numero_entero_dos)
 
 name = "Pepito"
 year = 1990
-print("El nombre del niño es " + name + " y su año de nacimiento es " + str(year))
-print(year + 10)
+#print("El nombre del niño es " + name + " y su año de nacimiento es " + str(year))
+#print(year + 10)
 
+#f-string
 name = "Juan"
 age = 42
 message = f"Mi nombre es {name} y mi edad es {age}"
-print(message)
+#print(message)
+
+#Método .format
+message = "Hola, me llamo {} y tengo {} años".format(name,age)
+#print(message) """
+
+""" #ENTRADA POR TECLADO CON INPUT
+
+#Cualquier tipo de dato
+
+entrada_dos = int(input())
+entrada_tres = str(input())
+entrada_cuatro = float(input()) 
+
+nombre_usuario = input("\nIngrese un nombre:\n") #salto de línea:\n
+print(f"Hola, " + nombre_usuario + ", bienvenidx a nuestro programa") """
+
