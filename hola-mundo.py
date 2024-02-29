@@ -165,5 +165,30 @@ texto_minusculas = texto_original.lower()
 print(f"Texto en Minúsculas: {texto_minusculas}")
 
  """
+#SUMA
+resultado_suma = 5 + 3
+print("La suma es:", resultado_suma)
 
- 
+#RESTA
+resultado_resta = 7 - 10
+print("La resta es:", resultado_resta)
+
+#MULTIPLICACIÓN
+resultado_multiplicacion = 3 * 4
+print("El resultado de la multiplicación es:", resultado_multiplicacion)
+
+#DIVISIÓN
+resultado_division = 7 / 2
+print("El resultado de la división es:", (resultado_division))
+
+#COCIENTE (ENTERO DE LA DIVISIÓN)
+cociente = 8 // 2
+print("Cociente: ", cociente)
+
+#MÓDULO (RESTO DE LA DIVISIÓN)
+resto = 7 & 2
+print("Resto:", resto)
+
+#POTENCIA
+resultado_potencia = 2 ** 6
+print(f"El resultado de la potencia es: {resultado_potencia}")
