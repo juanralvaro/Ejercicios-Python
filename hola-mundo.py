@@ -144,6 +144,13 @@ entrada_cuatro = float(input())
 nombre_usuario = input("\nIngrese un nombre:\n") #salto de línea:\n
 print(f"Hola, " + nombre_usuario + ", bienvenidx a nuestro programa") """
 
+""" ### Ejercicio 3
+
+- 3- Ejercicio Input() + conversión de variables
+    
+    Crear un programa que le solicite al usuario sus datos para renovarse el DNI. Una vez que el usuario ha introducido los datos, el programa se los mostrará a modo de resumen """
+
+
 """ #CONVERSIÓN MAYÚSCULAS-MINÚSCULAS
 
 texto_original = "Buenos días, Alejandra"
@@ -158,3 +165,5 @@ texto_minusculas = texto_original.lower()
 print(f"Texto en Minúsculas: {texto_minusculas}")
 
  """
+
+ 
