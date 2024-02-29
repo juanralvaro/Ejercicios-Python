@@ -142,4 +142,4 @@ entrada_cuatro = float(input())
 nombre_usuario = input("\nIngrese un nombre:\n") #salto de línea:\n
 print(f"Hola, " + nombre_usuario + ", bienvenidx a nuestro programa") """
 
-#import re || importar una librería  para trabajar con expresiones regulares
+
