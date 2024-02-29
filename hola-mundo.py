@@ -133,7 +133,7 @@ message = "Hola, me llamo {} y tengo {} años".format(name,age)
 
 #Cualquier tipo de dato
 
-entrada = input()
+entrada = input() # Por defecto es una cadena de caracteres
 
 entrada_dos = int(input())
 entrada_tres = str(input())
