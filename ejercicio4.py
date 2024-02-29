@@ -25,7 +25,7 @@ lista_accesorios = input("\nIntroduce los accesorios que quieras llevar:\n")
 lista_ropa = input("\nIntroduce las prendas de ropa que quieras llevar:\n")
 lista_tecnologia = input("\nIntroduce los aparatos tecnológicos que quieras llevar:\n")
 lista_zapatos_y_zapatillas = input("\nIntroduce los zapatos y zapatillas que quieras llevar:\n")
-print(f"¡Perfecto! Esto es lo que llevas." + "\n" + "\n" + "lista accesorios:".upper(), lista_accesorios.lower() + "\n" + "\n" + "lista ropa:".upper(), lista_ropa.lower() + "\n" + "\n" + "lista tecnologia:".upper(), lista_tecnologia.lower() + "\n" + "\n" + "lista zapatos & zapatillas:".upper(), lista_zapatos_y_zapatillas.lower() + "\n" + "¡Gracias por confiar en nosotros!")
+print(f"¡Perfecto! Esto es lo que llevas." + "\n" + "\n" + "lista accesorios:".upper(), lista_accesorios.lower() + "\n" + "\n" + "lista ropa:".upper(), lista_ropa.lower() + "\n" + "\n" + "lista tecnologia:".upper(), lista_tecnologia.lower() + "\n" + "\n" + "lista zapatos & zapatillas:".upper(), lista_zapatos_y_zapatillas.lower() + "\n" + "\n" + "¡Gracias por confiar en nosotros!")
 
 """ # Ejercicio de Planificación de Maletas para Vacaciones
 
