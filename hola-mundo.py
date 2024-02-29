@@ -135,7 +135,7 @@ message = "Hola, me llamo {} y tengo {} años".format(name,age)
 
 #Cualquier tipo de dato
 
-entrada = input() # Por defecto es una cadena de caracteres
+entrada = input() # Por defecto es una cadena de caracteres, se recomienda introducir previamente el tipo de dato:
 
 entrada_dos = int(input())
 entrada_tres = str(input())

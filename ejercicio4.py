@@ -21,10 +21,10 @@ y el título de cada lista en mayúsculas:
 		· LISTA ZAPATOS & ZAPATILLAS"""
 
 print("Bienvenido al planificador de vacaciones HappyDays.")
-lista_accesorios = input("\nIntroduce los accesorios que quieras llevar:\n")
-lista_ropa = input("\nIntroduce las prendas de ropa que quieras llevar:\n")
-lista_tecnologia = input("\nIntroduce los aparatos tecnológicos que quieras llevar:\n")
-lista_zapatos_y_zapatillas = input("\nIntroduce los zapatos y zapatillas que quieras llevar:\n")
+lista_accesorios = str(input("\nIntroduce los accesorios que quieras llevar:\n"))
+lista_ropa = str(input("\nIntroduce las prendas de ropa que quieras llevar:\n"))
+lista_tecnologia = str(input("\nIntroduce los aparatos tecnológicos que quieras llevar:\n"))
+lista_zapatos_y_zapatillas = str(input("\nIntroduce los zapatos y zapatillas que quieras llevar:\n"))
 print(f"¡Perfecto! Esto es lo que llevas." + "\n" + "\n" + "lista accesorios:".upper(), lista_accesorios.lower() + "\n" + "\n" + "lista ropa:".upper(), lista_ropa.lower() + "\n" + "\n" + "lista tecnologia:".upper(), lista_tecnologia.lower() + "\n" + "\n" + "lista zapatos & zapatillas:".upper(), lista_zapatos_y_zapatillas.lower() + "\n" + "\n" + "¡Gracias por confiar en nosotros!")
 
 """ # Ejercicio de Planificación de Maletas para Vacaciones
