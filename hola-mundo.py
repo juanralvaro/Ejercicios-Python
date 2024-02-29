@@ -165,30 +165,42 @@ texto_minusculas = texto_original.lower()
 print(f"Texto en Minúsculas: {texto_minusculas}")
 
  """
-#SUMA
-resultado_suma = 5 + 3
-print("La suma es:", resultado_suma)
+"""#OPERADORES EN PYTHON----------------------------------------
 
-#RESTA
-resultado_resta = 7 - 10
-print("La resta es:", resultado_resta)
+Tipos de operadores
+- operadores básicos: suma, resta, multiplicación, división, cociente de la división, módulo y potencia. Nos sirven para realizar operaciones matemáticas simples. 
+#SUMA "+"
+resultado_suma =  5 + 3
+#resultado_suma =  "Hola" + 3 --> No permite operar con tipos de datos diferentes: TypeError
+print("La suma es:", resultado_suma )
 
-#MULTIPLICACIÓN
-resultado_multiplicacion = 3 * 4
-print("El resultado de la multiplicación es:", resultado_multiplicacion)
+#RESTA "-"
+resultado_resta = 10 - 3
+#resultado_resta =  "Hola" - 3 --> No permite operar con tipos de datos diferentes: TypeError
+print("La resta es: " + str(resultado_resta)) #Para concatenar dos valores con el símbolo + necesitamos que sean del mismo tipo, si no lo son, necesitamos realizar una conversión
 
-#DIVISIÓN
-resultado_division = 7 / 2
-print("El resultado de la división es:", (resultado_division))
+#MULTIPLICACIÓN "*"
+resultado_multiplicacion = 4 * 5
+print("La multiplicación es:", resultado_multiplicacion)
+print(f"La multiplicación es: {resultado_multiplicacion}")
 
-#COCIENTE (ENTERO DE LA DIVISIÓN)
+#DIVISIÓN "/"
+resultado_division = 8 / 2
+print("El resultado de la división es:", resultado_division)
+print(f"El resultado de la división es: {int(resultado_division)}") #Para que salga solo el entero sin decimales puedo convertir el valor de la variable utilizando el método int()
+
+#COCIENTE de la división "//" --> Resultado de la división como número entero
 cociente = 8 // 2
 print("Cociente: ", cociente)
+print(f"Cociente: {float(cociente)}")
 
-#MÓDULO (RESTO DE LA DIVISIÓN)
-resto = 7 & 2
+#MÓDULO (Resto de la división) "%"
+resto = 9 % 2
 print("Resto:", resto)
+print(f"Resto: {resto}")
 
-#POTENCIA
-resultado_potencia = 2 ** 6
-print(f"El resultado de la potencia es: {resultado_potencia}")
+#POTENCIA "**"
+potencia = 2 ** 3
+print("La potencia es:", potencia)
+print(f"La potencia es:{potencia}")
+ """
