@@ -1,3 +1,5 @@
+#ACEPTAR SUGERENCIAS VS CODE : Tabulador    
+
 #Esto es un comentario de una sola línea
 
 """Esto
@@ -142,4 +144,17 @@ entrada_cuatro = float(input())
 nombre_usuario = input("\nIngrese un nombre:\n") #salto de línea:\n
 print(f"Hola, " + nombre_usuario + ", bienvenidx a nuestro programa") """
 
+""" #CONVERSIÓN MAYÚSCULAS-MINÚSCULAS
 
+texto_original = "Buenos días, Alejandra"
+print(texto_original)
+
+#Conversión a mayúsculas
+texto_mayusculas = texto_original.upper()
+print(f"Texto en Mayúsculas: {texto_mayusculas}")
+
+#Conversión a minúsculas
+texto_minusculas = texto_original.lower()
+print(f"Texto en Minúsculas: {texto_minusculas}")
+
+ """
