@@ -6,7 +6,7 @@ Donde *F* es la temperatura en grados Fahrenheit y *C* es la temperatura en grad
 
 Finalmente, muestra el resultado de la temperatura en ambas escalas. Utiliza f-strings para formatear la salida y muestra la temperatura en grados Fahrenheit con dos decimales. """
 
-print("Bienvenido al conversor de grados Celsius en grados Farenheit.")
+print("Bienvenido al conversor de grados Celsius en grados Fahrenheit.")
 
 temperatura_celsius = int(input("Introduzca la temperatura en grados Celsius: "))
 
