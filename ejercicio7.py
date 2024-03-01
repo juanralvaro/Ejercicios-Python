@@ -6,12 +6,15 @@ Donde *F* es la temperatura en grados Fahrenheit y *C* es la temperatura en grad
 
 Finalmente, muestra el resultado de la temperatura en ambas escalas. Utiliza f-strings para formatear la salida y muestra la temperatura en grados Fahrenheit con dos decimales. """
 
-print("Bienvenido al conversor de grados Celsius en grados Fahrenheit.")
+# Programa de Conversión de Temperatura
+print("¡Bienvenido al Programa de Conversión de Temperatura!")
 
-temperatura_celsius = int(input("Introduzca la temperatura en grados Celsius: "))
+# Entrada de datos
+temperatura_celsius = float(input("Introduce la temperatura en grados Celsius: "))
 
-temperatura_fahrenheit = (temperatura_celsius * 9 / 5 +  32)
-fahrenheit_dos_decimales = "{:.2f}".format(temperatura_fahrenheit)
+# Conversión a Fahrenheit
+temperatura_fahrenheit = (temperatura_celsius * 9/5) + 32
 
-print(f"La temperatura en grados Celsius es", temperatura_celsius)
-print(f"La temperatura en grados Farenheit es", fahrenheit_dos_decimales)
+# Mostrar resultados
+print(f"\nTemperatura en grados Celsius: {temperatura_celsius}")
+print(f"Temperatura en grados Fahrenheit: {temperatura_fahrenheit:.2f}")
