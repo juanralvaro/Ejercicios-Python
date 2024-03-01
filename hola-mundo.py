@@ -187,7 +187,7 @@ print(f"La multiplicación es: {resultado_multiplicacion}")
 #DIVISIÓN "/"
 resultado_division = 8 / 2
 print("El resultado de la división es:", resultado_division)
-print(f"El resultado de la división es: {int(resultado_division)}") #Para que salga solo el entero sin decimales puedo convertir el valor de la variable utilizando el método int()
+print(f"El resultado de la división es: {int(resultado_division)}") #Para que salga sólo el entero sin decimales puedo convertir el valor de la variable utilizando el método int()
 
 #COCIENTE de la división "//" --> Resultado de la división como número entero
 cociente = 8 // 2
