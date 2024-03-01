@@ -204,3 +204,20 @@ potencia = 2 ** 3
 print("La potencia es:", potencia)
 print(f"La potencia es:{potencia}")
  """
+
+""" print("Bienvenido al programa de operaciones aritméticas.")
+num1=int(input("Ingrese el primer número: "))
+num2=int(input("Ingrese el segundo número: "))
+
+print(f"La suma de {num1} y {num2} es {num1 + num2}.")
+print(f"La resta de {num1} y {num2} es {num1 - num2}.")
+print(f"La multiplicación de {num1} y {num2} es {num1 * num2}.")
+print(f"La división de {num1} y {num2} es {num1 / num2}.")
+print(f"El cociente de {num1} y {num2} es {num1 // num2}.")
+print(f"El resto resultado de la división entre {num1} y {num2} es {num1 & num2}.")
+print(f"La potencia de {num1} y {num2} es {num1 ** num2}.") """
+
+#numero_decimal = 3.148538475489579347
+#decimal_acortado = round(numero_decimal, 5)
+#decimal_acortado = "{:.7f}".format(numero_decimal)
+#print(decimal_acortado)
