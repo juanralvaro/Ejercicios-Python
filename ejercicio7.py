@@ -10,7 +10,6 @@ print("Bienvenido al conversor de grados Celsius en grados Fahrenheit.")
 
 temperatura_celsius = int(input("Introduzca la temperatura en grados Celsius: "))
 
-# Convertir a Fahrenheit
 temperatura_fahrenheit = (temperatura_celsius * 9 / 5 +  32)
 fahrenheit_dos_decimales = "{:.2f}".format(temperatura_fahrenheit)
 
