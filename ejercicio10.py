@@ -27,5 +27,5 @@ nombre = str(input("\nIntroduce tu nombre: "))
 edad = int(input("\nIntroduce tu edad: "))
 ciudad_de_residencia = str(input("\nIntroduce tu ciudad de residencia: "))
 
-print("\n¡Hola, ¡" + nombre.format() + ", de " + ciudad_de_residencia.format() + "! Bienvenido a la Universidad de Málaga.")
+print("\n¡Hola, {}, de {}! Bienvenido a la Universidad de Málaga.".format(nombre, ciudad_de_residencia))
 print(f"\nDisfruta estudiando aquí. Sólo tienes {edad} años y toda una vida por delante.")
