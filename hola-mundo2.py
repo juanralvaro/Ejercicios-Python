@@ -140,3 +140,42 @@ y = 5
 es_menor_o_igual = w <= y
 print(es_menor_o_igual) """
 
+a = "Hola"
+b = "Mundo"
+c = 24
+d = "Hola"
+print(id(a), id(b), id(c), id(d))
+
+print(a is b)
+print(a is not b)
+print(a is d)
+print(id(a) is id(d))
+
+e = "Juan"
+f = "Juan"
+print(id(e), id(f))
+print(e is f)
+print(id(e) is id(f))
+
+a = 10
+b = 12
+print("¿a es b?", (e is f))
+print("¿a no es b?", (e is not f))
+
+coche = "Ferrari"
+resultado_in = "i" in coche
+resultado_not_in = "i" not in coche
+print(resultado_in)
+print(resultado_not_in)
+
+euros = [0.25,0.50,0.75]
+resultado_in = 1.25 in euros
+resultado_not_in = 1.25 not in euros
+print(resultado_in)
+print(resultado_not_in)
+
+y = 2 > 1
+print("¿Y es cierto?", y)
+
+x = 2 < 1
+print("¿X es cierto?", x)
