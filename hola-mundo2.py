@@ -73,7 +73,7 @@ resultado_mayor_o_igual = g >= h
 resultado_menor_o_igual = g <= h
 print(resultado_menor_o_igual)
  """
-a = 7
+""" a = 7
 b = 5
 a += b
 print(a)
@@ -138,4 +138,5 @@ print(es_mayor_o_igual)
 w = 7
 y = 5
 es_menor_o_igual = w <= y
-print(es_menor_o_igual)
+print(es_menor_o_igual) """
+

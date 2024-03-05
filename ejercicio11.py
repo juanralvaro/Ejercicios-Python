@@ -31,7 +31,7 @@ current_age = current_year - birth_year
 age_in_5_years = current_age + 5
 age_in_10_years = current_age + 10
 print("\nResultados:")
-print("\nActualmente tienes " + str(current_age) + " años.")
-print("\nDentro de 5 años tendrás " + str(age_in_5_years) + " años.")
-print("\nY dentro de 10 años tendrás " + str(age_in_10_years)+ " años.")
-print("\nNo te deprimas, ¡tienes mucho que vivir!")
+print(f"\nActualmente tienes {current_age} años.")
+print(f"\nDentro de 5 años tendrás {age_in_5_years} años.")
+print(f"\nY dentro de 10 años tendrás {age_in_10_years} años.")
+print(f"\nNo te deprimas, ¡tienes mucho que vivir!")
