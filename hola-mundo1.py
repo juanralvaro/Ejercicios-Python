@@ -46,7 +46,10 @@ cadena = "Hola" #El índice hace referencia a la posición de cada uno de los ca
 print(cadena[0]) 
 
 cadena[0] = "L"
-print(cadena) #Error porque no se puede modificar un único caracter. """
+print(cadena) #Error porque no se puede modificar un único caracter. 
+
+edad = 345
+print(str(edad)[2]) """
 
 
 """ EJERCICIO 2
