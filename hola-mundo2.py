@@ -269,7 +269,7 @@ print("Mi lista personal contiene", lista_personal, "cuyo último dato es", tipo
 ultimo_dato = float(input("Introduce el último dato: "))
 lista_personal.append(ultimo_dato)
 tipo_dato = type(ultimo_dato)
-print("Mi lista personal final contiene", lista_personal, "cuyo dato final es de tipo", tipo_dato) """
+print("Mi lista personal final contiene", lista_personal, "cuyo dato final es de tipo", tipo_dato) 
 
 lista_mess1 = ["Adiós", "Hola", "Cabeza", "Ética", "Ácido"]
 lista_mess1.sort()
@@ -281,4 +281,4 @@ print(lista_mess2, lista_not_mess)
 
 lista_mess1.sort(reverse=True)
 lista_not_mess_rev = sorted(lista_mess2, reverse=True)
-print(lista_mess1, lista_not_mess_rev)
+print(lista_mess1, lista_not_mess_rev) """
