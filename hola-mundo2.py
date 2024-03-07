@@ -230,6 +230,8 @@ descendente_sorted = [2, 9, 5, 7, 6, 8, 1, 2]
 
 descendente_sort.sort(reverse=True)
 nueva_descendente_sorted = sorted(descendente_sorted, reverse=True)
+print("Resultado de las listas ordenadas descendentemente: \nSort:", descendente_sort, "\nSorted:", nueva_descendente_sorted)
+
  """
 #Ejemplos
 """ lista2 = ["Juan", 42, 1.84]
@@ -282,3 +284,28 @@ print(lista_mess2, lista_not_mess)
 lista_mess1.sort(reverse=True)
 lista_not_mess_rev = sorted(lista_mess2, reverse=True)
 print(lista_mess1, lista_not_mess_rev) """
+
+lista_nueva = [1, 2, 3, 4, 5, 6]
+print(lista_nueva)
+lista_nueva.insert(2, 2.5)
+print(lista_nueva)
+
+lista_animales = ["Perro", "Gato", "Ratón"]
+print(lista_animales)
+lista_animales.extend(["Cuervo", "Águila", "León"])
+print(lista_animales)
+lista_animales.extend(["Pájaro", "Nutria", "Ballena"])
+print(lista_animales)
+
+lista_numerica = [1, 4, 2, 4, 2, 1]
+lista_numerica.remove(1)
+print(lista_numerica)
+lista_numerica.remove(2)
+print(lista_numerica)
+
+lista_numerica_dos = [1, 3, 2, 4, 3, 4, 2, 1]
+indice_tres = lista_numerica_dos.index(3)
+print(indice_tres)
+
+lista_numerica_dos.clear()
+print(lista_numerica_dos)
