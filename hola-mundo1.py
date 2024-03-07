@@ -12,12 +12,12 @@ en bloque: Los comentarios son fragmentos de código que son ignoradas por el in
 
 #EJEMPLOS DE TIPOS DE DATOS
 
-""" # _numero = 3 #Los nombre de variables no pueden comenzar por un número ni por un caracter especial,  a excepción del _numero = 42
+""" # _numero = 3 #Los nombre de variables no pueden comenzar por un número ni por un caracter especial,  a excepción del _numero = 42 """
 
 #Puedo declarar varias variables a la vez
-#nombre, edad, altura = "Juan", 30, 1
+"""  """#nombre, edad, altura = "Juan", 30, 1
 
-#print(nombre)
+""" #print(nombre) """
 
 #namning de las variables --> Minúyscula + snake_case """
 
@@ -39,16 +39,15 @@ print("Mi nombre es " + nombre + " y mi edad es " + str(edad)) #Conversión de v
 
 #CADENAS DE CARACTERES
 
-"""
 #Siempre antes y después de un operador, tengo que incluir un espacio (el símbolor = es en Python el operador de asignación, el que utilizamos para asignar un valor a una variable)
 
-cadena = "Hola" #El índice hace referencia a la posición de cada uno de los caracteres dentro de una cadena. El primer caracter en cualquier cadena siempre es el índice 0)
-print(cadena[0]) 
+""" cadena = "Hola" #El índice hace referencia a la posición de cada uno de los caracteres dentro de una cadena. El primer caracter en cualquier cadena siempre es el índice 0)
+print(cadena[0])  """
 
-cadena[0] = "L"
-print(cadena) #Error porque no se puede modificar un único caracter. 
+""" cadena[0] = "L"
+print(cadena) #Error porque no se puede modificar un único caracter.  """
 
-edad = 345
+""" edad = 345
 print(str(edad)[2]) """
 
 
@@ -81,128 +80,128 @@ print(nueva_cadena[:8])
 print(nueva_cadena[-1])
 print(nueva_cadena[-2]) """
 
-""" TIPOS CONVERSIÓN DE DATOS 
+#TIPOS CONVERSIÓN DE DATOS 
 
-¿Por qué es importante realizar conversiones de datos en Python?
+""" ¿Por qué es importante realizar conversiones de datos en Python?
     · Poder realizar operaciones coherentes.
     · Presentación de los datos
     · Interacción con los usuarios
     · Compatibilidad
+ """
+#TIPOS --->
 
-TIPOS --->
-
-1 - Casting de datos: Cambiar el tipo de dato de una variable
-    numero_entero = int(3.14278974)
+#1 - Casting de datos: Cambiar el tipo de dato de una variable
+"""     numero_entero = int(3.14278974)
     numero_entero_dos = "El numero entero es" +  str(numero_entero)
+ """
+#2 - Concatenación de variables: Combinar variables de diferentes tipos en una cadena
+""" print("El nombre del usuario es " + name + " y su año de nacimiento es " + str(year)) """
 
-2 - Concatenación de variables: Combinar variables de diferentes tipos en una cadena
-    print("El nombre del usuario es " + name + " y su año de nacimiento es " + str(year))
-
-3 - F-string: Simplificar la creacción de cadenas con variables.
-    name = "Carlos"
+#3 - F-string: Simplificar la creacción de cadenas con variables.
+""" name = "Carlos"
     age = 35
     mensaje = f"Hola mi nombre es {name} y mi edad es {age}"
-
-4 - .format : Alternativa más antigua para formatear cadenas. Surgió con Python1
-    El método format() se utiliza para construir cadenas que contienen valores de variables.
+ """
+#4 - .format : Alternativa más antigua para formatear cadenas. Surgió con Python1
+""" El método format() se utiliza para construir cadenas que contienen valores de variables.
     La sintaxis básica es:    
     mensaje = "Hola {} y su edad es {}".format(name, age)  #{} -> Marcadores
-
-Otros métodos avanzados: 
+ """
+#Otros métodos avanzados: 
+"""
 json.dumps()
 xml.etree.ElementTree.dump()
 
 """
 
-""" #Casting de datos
-numero_entero = int(3.14278974)
-numero_entero_dos = "El numero entero es " +  str(numero_entero)
-#print(numero_entero_dos)
+#Casting de datos
+""" numero_entero = int(3.14278974)
+numero_entero_dos = "El numero entero es " +  str(numero_entero) 
+print(numero_entero_dos)"""
 
-name = "Pepito"
+""" name = "Pepito"
 year = 1990
-#print("El nombre del niño es " + name + " y su año de nacimiento es " + str(year))
-#print(year + 10)
-
+print("El nombre del niño es " + name + " y su año de nacimiento es " + str(year))
+print(year + 10)
+ """
 #f-string
-name = "Juan"
+""" name = "Juan"
 age = 42
 message = f"Mi nombre es {name} y mi edad es {age}"
-#print(message)
-
+print(message)
+ """
 #Método .format
-message = "Hola, me llamo {} y tengo {} años".format(name,age)
-#print(message) """
+""" message = "Hola, me llamo {} y tengo {} años".format(name,age)
+print(message)  """
 
-""" #ENTRADA POR TECLADO CON INPUT
+#ENTRADA POR TECLADO CON INPUT
 
 #Cualquier tipo de dato
 
-entrada = input() # Por defecto es una cadena de caracteres, se recomienda introducir previamente el tipo de dato:
-
-entrada_dos = int(input())
+""" entrada = input() # Por defecto es una cadena de caracteres, se recomienda introducir previamente el tipo de dato:
+ """
+""" entrada_dos = int(input())
 entrada_tres = str(input())
 entrada_cuatro = float(input()) 
 
 nombre_usuario = input("\nIngrese un nombre:\n") #salto de línea:\n
 print(f"Hola, " + nombre_usuario + ", bienvenidx a nuestro programa") """
-
+"""
 """ ### Ejercicio 3
 
-- 3- Ejercicio Input() + conversión de variables
+""" - 3- Ejercicio Input() + conversión de variables
     
     Crear un programa que le solicite al usuario sus datos para renovarse el DNI. Una vez que el usuario ha introducido los datos, el programa se los mostrará a modo de resumen """
 
+#CONVERSIÓN MAYÚSCULAS-MINÚSCULAS
 
-""" #CONVERSIÓN MAYÚSCULAS-MINÚSCULAS
-
-texto_original = "Buenos días, Alejandra"
-print(texto_original)
+""" texto_original = "Buenos días, Alejandra"
+print(texto_original) """
 
 #Conversión a mayúsculas
-texto_mayusculas = texto_original.upper()
-print(f"Texto en Mayúsculas: {texto_mayusculas}")
+""" texto_mayusculas = texto_original.upper()
+print(f"Texto en Mayúsculas: {texto_mayusculas}") """
 
 #Conversión a minúsculas
-texto_minusculas = texto_original.lower()
-print(f"Texto en Minúsculas: {texto_minusculas}")
+""" texto_minusculas = texto_original.lower()
+print(f"Texto en Minúsculas: {texto_minusculas}") """
 
- """
-"""#OPERADORES EN PYTHON----------------------------------------
+#OPERADORES EN PYTHON----------------------------------------
 
-Tipos de operadores
-- operadores básicos: suma, resta, multiplicación, división, cociente de la división, módulo y potencia. Nos sirven para realizar operaciones matemáticas simples. 
+#Tipos de operadores
+""" - operadores básicos: suma, resta, multiplicación, división, cociente de la división, módulo y potencia. Nos sirven para realizar operaciones matemáticas simples.  """
 #SUMA "+"
-resultado_suma =  5 + 3
-#resultado_suma =  "Hola" + 3 --> No permite operar con tipos de datos diferentes: TypeError
-print("La suma es:", resultado_suma )
+""" resultado_suma =  5 + 3 
+#resultado_suma =  "Hola" + 3 --> No permite operar con tipos de datos diferentes: TypeError """
+""" print("La suma es:", resultado_suma ) """
 
 #RESTA "-"
-resultado_resta = 10 - 3
+""" resultado_resta = 10 - 3
 #resultado_resta =  "Hola" - 3 --> No permite operar con tipos de datos diferentes: TypeError
-print("La resta es: " + str(resultado_resta)) #Para concatenar dos valores con el símbolo + necesitamos que sean del mismo tipo, si no lo son, necesitamos realizar una conversión
+print("La resta es: " + str(resultado_resta)) #Para concatenar dos valores con el símbolo + necesitamos que sean del mismo tipo, si no lo son, necesitamos realizar una conversión """
 
 #MULTIPLICACIÓN "*"
-resultado_multiplicacion = 4 * 5
+""" resultado_multiplicacion = 4 * 5
 print("La multiplicación es:", resultado_multiplicacion)
-print(f"La multiplicación es: {resultado_multiplicacion}")
+print(f"La multiplicación es: {resultado_multiplicacion}") """
 
 #DIVISIÓN "/"
-resultado_division = 8 / 2
+""" resultado_division = 8 / 2
 print("El resultado de la división es:", resultado_division)
-print(f"El resultado de la división es: {int(resultado_division)}") #Para que salga sólo el entero sin decimales puedo convertir el valor de la variable utilizando el método int()
+print(f"El resultado de la división es: {int(resultado_division)}") #Para que salga sólo el entero sin decimales puedo convertir el valor de la variable utilizando el método int() """
 
 #COCIENTE de la división "//" --> Resultado de la división como número entero
-cociente = 8 // 2
+""" cociente = 8 // 2
 print("Cociente: ", cociente)
 print(f"Cociente: {float(cociente)}")
-
+ """
 #MÓDULO (Resto de la división) "%"
-resto = 9 % 2
+""" resto = 9 % 2
 print("Resto:", resto)
 print(f"Resto: {resto}")
-
+ """
 #POTENCIA "**"
+"""
 potencia = 2 ** 3
 print("La potencia es:", potencia)
 print(f"La potencia es:{potencia}")
