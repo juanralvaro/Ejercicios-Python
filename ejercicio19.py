@@ -7,27 +7,30 @@
     4. Eliminar la segunda tarea de la lista
     5. Mostrar el número de tareas después de eliminar la del punto d. """
 
-#Bienvenida
-print("Bienvenido al programa de gestión de tareas.")
+# Programa gestión de tareas (listas)
 
-#Nueva lista
-lista_tareas = []
+# Inicializar la lista de tareas
+tareas = []
 
-#Agregar tres tareas al final de la lista
-nueva_tarea1 = str(input("\nIntroduzca la tarea en formato 'tarea_xxx': "))
-nueva_tarea2 = str(input("Introduzca la tarea en formato 'tarea_xxx': "))
-nueva_tarea3 = str(input("Introduzca la tarea en formato 'tarea_xxx': "))
+# 1. Agregar tres tareas al final de la lista de forma simultánea
+print("Agregar tres tareas:")
+tareas.append(str(input("Tarea 1: ")))
+tareas.append(str(input("Tarea 2: ")))
+tareas.append(str(input("Tarea 3: ")))
 
-lista_tareas.extend([nueva_tarea1,nueva_tarea2,nueva_tarea3])
+# 2. Mostrar todas las tareas actuales
+print("\nTareas actuales:")
+print("-", tareas[0])
+print("-", tareas[1])
+print("-", tareas[2])
 
-#Mostrar las tareas actuales
-print(lista_tareas)
+# 3. Verificar si una tarea específica está presente en la lista
+tarea_buscar = input("\nIngrese una tarea a buscar: ")
+contador_tarea = tareas.count(tarea_buscar)
+print(f"\nLa tarea '{tarea_buscar}' está presente {contador_tarea} veces en la lista.")
 
-#Verificar si una tarea específica, tarea_buscar, está presente en vuestra lista
-print("\nLa tarea 'tarea_buscar' está presente", lista_tareas.count("tarea_buscar"),"veces.")
+# 4. Eliminar la segunda tarea de la lista
+tareas.remove(tareas[1])
 
-#Eliminar la segunda tarea de la lista
-lista_tareas.remove("tarea_limpiar")
-
-#Mostrar el número de tareas después de eliminar la del punto d
-print("\nQuedan estas tareas:",lista_tareas)
+# 5. Mostrar el número de tareas después de eliminar la del punto 4
+print("\nNúmero de tareas después de eliminar una tarea:", len(tareas))
