@@ -204,6 +204,11 @@ tipo_lista = type(mi_lista)
 print(mi_lista, "El tipo de datos de la lista es:", tipo_lista)
  """
 
+#Método remove(): Eliminar un elemento de nuestra lista. 
+""" mi_lista.remove([2])
+print(mi_lista)
+ """
+
 #--> ¿Cómo hacer que el usuario añada elementos a la lista?
 """ lista_usuario = [] #Creamos una lista vacia
 nuevo_elemento = int(input("Introduce un número: "))
@@ -230,9 +235,16 @@ descendente_sorted = [2, 9, 5, 7, 6, 8, 1, 2]
 
 descendente_sort.sort(reverse=True)
 nueva_descendente_sorted = sorted(descendente_sorted, reverse=True)
-print("Resultado de las listas ordenadas descendentemente: \nSort:", descendente_sort, "\nSorted:", nueva_descendente_sorted)
+print("Resultado de las listas ordenadas descendentemente: \nSort:", descendente_sort, "\nSorted:", nueva_descendente_sorted)"""
 
- """
+#Método len(): Comprueba la longitud o número de elementos de una lista
+"""lista_longitud = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("La longitud de la lista es: ",len(lista_longitud))"""
+
+#Método count(): Devuelve el número de ocurrencias de un elemento en la lista
+"""nueva_lista_tres = [1, 2, 3, 1, 3, 2, 3, 3, 3, 3]
+print("Hay", nueva_lista_tres.count(2), "elementos '2' en la lista.")"""
+
 #Ejemplos
 """ lista2 = ["Juan", 42, 1.84]
 print(lista2)
@@ -283,7 +295,7 @@ print(lista_mess2, lista_not_mess)
 
 lista_mess1.sort(reverse=True)
 lista_not_mess_rev = sorted(lista_mess2, reverse=True)
-print(lista_mess1, lista_not_mess_rev) """
+print(lista_mess1, lista_not_mess_rev) 
 
 lista_nueva = [1, 2, 3, 4, 5, 6]
 print(lista_nueva)
@@ -309,3 +321,9 @@ print(indice_tres)
 
 lista_numerica_dos.clear()
 print(lista_numerica_dos)
+
+lista_larga = [1, 2, 4, 8.20, "Hola", [2, 3]]
+print(len(lista_larga))
+
+lista_de_cuenta = [2, 3, 23, 5, 2, 5, 3, 2, 5]
+print(lista_de_cuenta.count(2))"""
