@@ -27,7 +27,7 @@ Otros: 40.50 pesetas*
 *Total de Gastos Mensuales: 402.00 pesetas* """
 
 
-
+"""
 print("Bienvenido al programa de registro de tus gastos mensuales.")
 
 categorias_gastos = ["Alimentación", "Transporte", "Entretenimiento", "Servicios", "Otros"]
@@ -55,9 +55,9 @@ for total_gastos in categorias_gastos:
     print(f"\nServicios: {servicios} €.")
     print(f"\nOtros: {otros} €.")
 
-print(f"\nEl total de los gastos mensuales es: {total_gastos}.") 
+print(f"\nEl total de los gastos mensuales es: {total_gastos}.") """
 
-""" print("Bienvenido al programa de registro de tus gastos mensuales.")
+print("Bienvenido al programa de registro de tus gastos mensuales.")
 
 categorias_gastos = ["Alimentación", "Transporte", "Entretenimiento", "Servicios", "Otros"]
 gastos = [0] * len(categorias_gastos)
@@ -72,4 +72,4 @@ print("\nÉste es el resumen de gastos mensuales:")
 for i in range(len(categorias_gastos)):
     print(f"\n{categorias_gastos[i]}: {gastos[i]} €.")
 
-print(f"\nEl total de los gastos mensuales es: {total_gastos} €.") """
+print(f"\nEl total de los gastos mensuales es: {total_gastos} €.")
