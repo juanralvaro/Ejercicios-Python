@@ -26,6 +26,10 @@ print("-", tareas[2])
 
 # 3. Verificar si una tarea específica está presente en la lista
 tarea_buscar = input("\nIngrese una tarea a buscar: ")
+""" Otra forma de resolverlo: 
+tarea_en_lista = tarea_buscar in tareas
+print("La tarea que acabas de añadir esta en la lista:", tarea_en_lista)
+"""
 contador_tarea = tareas.count(tarea_buscar)
 print(f"\nLa tarea '{tarea_buscar}' está presente {contador_tarea} veces en la lista.")
 
