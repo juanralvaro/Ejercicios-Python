@@ -245,6 +245,32 @@ print("La longitud de la lista es: ",len(lista_longitud))"""
 """nueva_lista_tres = [1, 2, 3, 1, 3, 2, 3, 3, 3, 3]
 print("Hay", nueva_lista_tres.count(2), "elementos '2' en la lista.")"""
 
+#Método len(): Comprueba la longitud o número de elementos de una lista
+""" lista_longitud = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("La longitud de la lista es: ",len(lista_longitud)) """
+
+#Método count(): Devuelve el número de ocurrencias de un elemento en la lista
+""" nueva_lista_tres = [1, 2, 3, 1, 3, 2, 3, 3, 3, 3]
+print("Hay", nueva_lista_tres.count(2), "elementos '2' en la lista.") """
+
+#Método pop(): Elimina y devuelve el elemento que se encuentra en la posición indicada, o el último elemento si no se proporciona un índice.
+""" lista_pop = [0, 1, 2, 3, 4, 1]
+elemento = lista_pop.pop(4)# Resultado: lista=[1, 3], elemento=2
+print("Lista sin el elemento eliminado:", lista_pop,"\nElemento eliminado:", elemento) """
+
+#Método reserve(): Invierte los elementos de la lista
+""" lista_pop.reverse()
+print("Lista invertida:", lista_pop) """
+
+#Método copy(): Crea y devuelve una copia superficial de la lista.
+""" copia_de_mi_lista = lista_pop.copy()
+print("Copia de mi lista:", copia_de_mi_lista) """
+
+#INTRODUCCIÓN BUCLE FOR: Una estructura de control que me va a permitir ITERAR sobre los elementos de una secuencia. Lo utilizo para iterar sobre listas, tuplas, cadenas de caracteres o sobre cualquier otro elementos ITERABLES.
+""" lista_frutas = ["manzana", "pera", "plátano"]
+for fruta in lista_frutas:
+    print("Soy", fruta) """
+
 #Ejemplos
 """ lista2 = ["Juan", 42, 1.84]
 print(lista2)
@@ -326,4 +352,18 @@ lista_larga = [1, 2, 4, 8.20, "Hola", [2, 3]]
 print(len(lista_larga))
 
 lista_de_cuenta = [2, 3, 23, 5, 2, 5, 3, 2, 5]
-print(lista_de_cuenta.count(2))"""
+print(lista_de_cuenta.count(2))
+
+lista_variable = [0, 2, 4, 5, 7]
+elemento_out = lista_variable.pop(3)
+print(lista_variable,"sin el",elemento_out)
+
+lista_variable.reverse()
+print(lista_variable)
+
+lista_copiada = lista_variable.copy()
+print(lista_copiada)
+
+lista_animales = ["perro", "gato", "ratón"]
+for animal in lista_animales:
+    print("Soy un",animal)"""
