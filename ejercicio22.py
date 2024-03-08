@@ -26,14 +26,50 @@ Otros: 40.50 pesetas*
 
 *Total de Gastos Mensuales: 402.00 pesetas* """
 
+
+
 print("Bienvenido al programa de registro de tus gastos mensuales.")
 
-lista_alimentacion = []
-lista_transporte = []
-lista_entretenimiento = []
-lista_servicios = []
-lista_otros = []
-
-lista_categorias_gastos = [lista_alimentacion, lista_transporte, lista_entretenimiento, lista_servicios, lista_otros]
+categorias_gastos = ["Alimentación", "Transporte", "Entretenimiento", "Servicios", "Otros"]
 
 total_gastos = 0
+
+for alimentacion in categorias_gastos:
+    alimentacion = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[0]}: "))
+    total_gastos += alimentacion
+    transporte = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[1]}: "))
+    total_gastos += transporte
+    entretenimiento = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[2]}: "))
+    total_gastos += entretenimiento
+    servicios = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[3]}: "))
+    total_gastos += servicios
+    otros = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[4]}: "))
+    total_gastos += otros
+    
+print("\nÉste es el resumen de gastos mensuales:")
+
+for total_gastos in categorias_gastos:
+    print(f"\nAlimentación: {alimentacion} €.")
+    print(f"\nTransporte: {transporte} €.")
+    print(f"\nEntretenimiento: {entretenimiento} €.")
+    print(f"\nServicios: {servicios} €.")
+    print(f"\nOtros: {otros} €.")
+
+print(f"\nEl total de los gastos mensuales es: {total_gastos}.") 
+
+""" print("Bienvenido al programa de registro de tus gastos mensuales.")
+
+categorias_gastos = ["Alimentación", "Transporte", "Entretenimiento", "Servicios", "Otros"]
+gastos = [0] * len(categorias_gastos)
+
+total_gastos = 0
+
+for i in range(len(categorias_gastos)):
+    gastos[i] = float(input(f"Ingrese el importe de gasto para {categorias_gastos[i]}: "))
+    total_gastos += gastos[i]
+
+print("\nÉste es el resumen de gastos mensuales:")
+for i in range(len(categorias_gastos)):
+    print(f"\n{categorias_gastos[i]}: {gastos[i]} €.")
+
+print(f"\nEl total de los gastos mensuales es: {total_gastos} €.") """
