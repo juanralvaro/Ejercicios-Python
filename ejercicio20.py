@@ -43,7 +43,7 @@ print("\nEsta es la lista de libros de la biblioteca:")
 for libro in lista_titulo:
 	print(libro)
 
-#Ver lista de libros
+#Ver lista de autores
 print("\nEsta es la lista de autores de la biblioteca:")
 for autor in lista_autor:
 	print(autor)
@@ -51,7 +51,7 @@ for autor in lista_autor:
 #Ver lista de libros y autores
 print("\nEsta es la lista de libros con autores de la biblioteca:")
 for obra in lista_biblioteca:
-	print("libro:",obra[0],", autor:", obra[1])
+	print("libro:",obra[0],",autor:", obra[1])
 
 #Número de libros hoy en la biblioteca
 print("Hay",len(lista_biblioteca),"libros en la biblioteca.")
@@ -61,6 +61,6 @@ lista_biblioteca_ayer = [] #Se supone que hoy la inauguramos.
 print("¿Es cierto que hay más libros hoy en la biblioteca que ayer?",len(lista_biblioteca) >= len(lista_biblioteca_ayer))
 
 #Búsqueda de libros por autor
-busca_autor = input(str("\nBusca el numero de libros del autor: "))
+busca_autor = str(input("\nBusca el numero de libros del autor: "))
 busca_autor= busca_autor.lower()
 print("\nDel autor", busca_autor,"hay esta cantidad de libros:", lista_autor.count(busca_autor))
