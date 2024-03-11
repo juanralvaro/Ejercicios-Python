@@ -26,50 +26,20 @@ Otros: 40.50 pesetas*
 
 *Total de Gastos Mensuales: 402.00 pesetas* """
 
-
-"""
-print("Bienvenido al programa de registro de tus gastos mensuales.")
-
+#1. Crea una lista llamada **`categorias_gastos`** que contenga las siguientes categorías: "Alimentación", "Transporte", "Entretenimiento", "Servicios" y "Otros".
 categorias_gastos = ["Alimentación", "Transporte", "Entretenimiento", "Servicios", "Otros"]
 
-total_gastos = 0
+gasto_categoria = {}
 
-for alimentacion in categorias_gastos:
-    alimentacion = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[0]}: "))
-    total_gastos += alimentacion
-    transporte = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[1]}: "))
-    total_gastos += transporte
-    entretenimiento = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[2]}: "))
-    total_gastos += entretenimiento
-    servicios = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[3]}: "))
-    total_gastos += servicios
-    otros = float(input(f"\nIngrese el importe de gasto para {categorias_gastos[4]}: "))
-    total_gastos += otros
-    
-print("\nÉste es el resumen de gastos mensuales:")
+for categoria in categorias_gastos:
+  gasto = float(input(f"Ingrese el importe de gasto para {categoria}: "))
+  gasto_categoria[categoria] = gasto
 
-for total_gastos in categorias_gastos:
-    print(f"\nAlimentación: {alimentacion} €.")
-    print(f"\nTransporte: {transporte} €.")
-    print(f"\nEntretenimiento: {entretenimiento} €.")
-    print(f"\nServicios: {servicios} €.")
-    print(f"\nOtros: {otros} €.")
+#4. Muestra un resumen de gastos mensuales por categoría.
+print("\nResumen de Gastos Mensuales:")
+for categoria, gasto in gasto_categoria.items():
+    print(f"{categoria}: {gasto}€")
 
-print(f"\nEl total de los gastos mensuales es: {total_gastos}.") """
-
-print("Bienvenido al programa de registro de tus gastos mensuales.")
-
-categorias_gastos = ["Alimentación", "Transporte", "Entretenimiento", "Servicios", "Otros"]
-gastos = [0] * len(categorias_gastos)
-
-total_gastos = 0
-
-for i in range(len(categorias_gastos)):
-    gastos[i] = float(input(f"Ingrese el importe de gasto para {categorias_gastos[i]}: "))
-    total_gastos += gastos[i]
-
-print("\nÉste es el resumen de gastos mensuales:")
-for i in range(len(categorias_gastos)):
-    print(f"\n{categorias_gastos[i]}: {gastos[i]} €.")
-
-print(f"\nEl total de los gastos mensuales es: {total_gastos} €.")
+#5. Finalmente, muestra el total de gastos mensuales.
+total_gastos = sum(gasto_categoria.values())
+print(f"\nTotal de Gastos Mensuales: {total_gastos:.2f}€")

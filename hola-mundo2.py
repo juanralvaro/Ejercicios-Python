@@ -367,3 +367,51 @@ print(lista_copiada)
 lista_animales = ["perro", "gato", "ratón"]
 for animal in lista_animales:
     print("Soy un",animal)"""
+
+# COLECCIONES DE DATOS: TUPLAS ***************************
+"""Tipo de estructura de datos que nos permite almacenar datos y que además son INMUTABLES, lo que las hace más rápidas a la hora de acceder a ellas
+tupla_vacia = ()
+mi_primera_tupla = (10, "Hola", True) 
+mi_tupla = 1, 2, 3, "oso", False #Puedo crear una tupla sin utilizar los ()
+print( "El tipo de datos de mi tupla es:", type(mi_tupla), mi_primera_tupla)"""
+
+#Acceder a los elementos de mi tupla
+""" tupla_acceso = 0, 1, 2, "Pepe", 4
+print("Accediendo a mi tupla:", tupla_acceso[3])
+tupla_dentro_tupla = 1, 5, 8, ("y", "w", "z"), 5, 6
+print("Tupla dentro de otra tupla:", tupla_dentro_tupla[3][0]) """
+
+#Modificar los elementos de mi tupla --> ERROR: TypeError: 'tuple' object does not support item assignment
+#Excepción: modificar elementos de una lista que esté en mi tupla
+""" modificar_tupla = 1, 2, 3, 4, 5, ["hola", "adios", "pepe"]
+print("Tupla antes de modificación:", modificar_tupla)
+#modificar_tupla[2] = 2
+#print("Intentando modificar la tupla: ", modificar_tupla)
+modificar_tupla[5][1] = "ADIOS"
+print("Tupla después de modificación:",modificar_tupla) """
+
+#Asignar el valor de los elementos de una tupla a variables
+""" tupla_asigna = 3, 4, 5
+x, y, z = tupla_asigna
+print("Asignación múltiple:",x, y, z) """
+
+#Convertir una lista en una tupla --> tuple()
+""" lista_inicial = [7, 9, 11]
+lista_convertida_tupla = tuple(lista_inicial) #Casting de datos para convertir una lista en una tupla
+print("Tipo de lista convertida:", type(lista_convertida_tupla), "& Tipo de lista antes de la conversión:", type(lista_inicial)) """
+
+tupla = 1, 4, 7
+print(tupla)
+print(tupla[1])
+
+tupla_en_tupla = 1, 5, 8, ("a", "b"), 6
+print(tupla_en_tupla[2], tupla_en_tupla [3][1])
+
+tupla_con_lista = 2, 4, ["buenas", "tardes"]
+print(tupla_con_lista)
+tupla_con_lista[2][1] = "noches"
+print(tupla_con_lista)
+
+tupla_valores = 4, 7, 8, 3
+a, b, c, d = tupla_valores
+print(a, b, c, d)

@@ -8,7 +8,7 @@
 
 saldo_inicial = float(input("Introduzca su saldo inicial: "))
 
-print("Bienvenido al simulador de gastos y ahorros.")
+print(f"Bienvenido al simulador de gastos y ahorros. Su saldo inicial es de {saldo_inicial} €.")
 
 gasto1 = float(input("Introduzca su último gasto: "))
 saldo_inicial -= gasto1
@@ -38,6 +38,6 @@ lista_gastos.append(gasto1)
 lista_gastos.append(gasto2)
 lista_gastos.append(gasto3)
 
-print(f"\nSu saldo actual es {saldo_inicial} €.")
+print(f"\nSu saldo actual es de {saldo_inicial} €.")
 print("Lista de gastos en €: ", lista_gastos)
 print("Lista de ahorros en €: ", lista_ahorros)
