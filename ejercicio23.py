@@ -15,15 +15,15 @@
 temperaturas = 23, 25, 29, 26, 12, 18, 14, 25, 12, 25
 
 #2. Impresión tupla original
-print(len(temperaturas))
+print("Longitud tupla original:",len(temperaturas))
 
 #3. Contar las veces que aparece el valor 25
 veces_valor_veinticinco = temperaturas.count(25)
-print(veces_valor_veinticinco)
+print("Veces valor 25:",veces_valor_veinticinco)
 
 #4. Encontrar índice del primer valor 18
 primer_indice_dieciocho = temperaturas.index(18)
-print(primer_indice_dieciocho)
+print("Primer índice valor 18:",primer_indice_dieciocho)
 
 #5. Crear tupla temperaturas_ordenadas
 ordenar_temperaturas = sorted(temperaturas)
