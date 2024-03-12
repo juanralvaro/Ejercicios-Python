@@ -36,7 +36,7 @@ concatenacion_tupla_original_y_ordenada = temperaturas + temperaturas_ordenadas
 temperaturas_repetidas = temperaturas * 3
 
 #8. Imprimir tuplas resultantes
-print(temperaturas)
-print(temperaturas_ordenadas)
-print(concatenacion_tupla_original_y_ordenada)
-print(temperaturas_repetidas)
+print("Tupla temperaturas:",temperaturas)
+print("Tupla temperaturas ordenadas:",temperaturas_ordenadas)
+print("Tuplas concatenadas:",concatenacion_tupla_original_y_ordenada)
+print("Tupla repetida:",temperaturas_repetidas)
