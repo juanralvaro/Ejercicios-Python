@@ -9,4 +9,34 @@
 7. Repite la tupla original tres veces y almacénala en una nueva tupla llamada **`temperaturas_repetidas`**.
 8. Imprime todas las tuplas resultantes y observa los cambios.
 
-**Nota:** Asegúrate de utilizar los métodos y operadores adecuados para realizar estas operaciones. """
+**Nota:** Asegúrate de utilizar los métodos y operadores vistos en clase. """
+
+#1. Creación tupla
+temperaturas = 23, 25, 29, 26, 12, 18, 14, 25, 12, 25
+
+#2. Impresión tupla original
+print(len(temperaturas))
+
+#3. Contar las veces que aparece el valor 25
+veces_valor_veinticinco = temperaturas.count(25)
+print(veces_valor_veinticinco)
+
+#4. Encontrar índice del primer valor 18
+primer_indice_dieciocho = temperaturas.index(18)
+print(primer_indice_dieciocho)
+
+#5. Crear tupla temperaturas_ordenadas
+ordenar_temperaturas = sorted(temperaturas)
+temperaturas_ordenadas = tuple(ordenar_temperaturas)
+
+#6. Concatenar tupla original y ordenada
+concatenacion_tupla_original_y_ordenada = temperaturas + temperaturas_ordenadas
+
+#7. Multiplicar tupla original y almacenarla en una nueva
+temperaturas_repetidas = temperaturas * 3
+
+#8. Imprimir tuplas resultantes
+print(temperaturas)
+print(temperaturas_ordenadas)
+print(concatenacion_tupla_original_y_ordenada)
+print(temperaturas_repetidas)

@@ -416,7 +416,43 @@ print("\nIndex de la segunda ocurrencia de 10: ", indice_dos)
 indice_tres = tupla_index.index(10, 5, 8)
 print("\nIndex de la ocurrencia de 10 entre los index 5 y 7: ", indice_tres) """
 
-tupla = 1, 4, 7
+#Método len(): Devuelve la longitud (número de elementos) de mi tupla
+""" tupla_longitud = 1, 2, 2, 2, 1, 1, 2, 2, 1, 1, 12, 2, 1, 2
+print("La longitud de la tupla es:", len(tupla_longitud))
+longitud = len(tupla_longitud)
+print(f"La longitud es {longitud}") """
+
+#Método sorted(): Devuelve uns LISTA ordenada a partir de los elementos de la tupla. Yo NO ESTOY MODIFICANDO MI TUPLA (ni cambio el orden..), estoy creando una nueva colección de datos (lista) a partir de los datos existentes en la tupla. Hace un 2x1: convierte(convierte creando una nueva colección de datos, no incidiendo sobre la colección de datos original) + ordena
+""" tupla_desordenada = 4, 6, 2, 7, 3, 5, 1, 8, 7, 0, 9
+coleccion_ordenada = sorted(tupla_desordenada) """
+"""Esta instrucción realiza los siguientes pasos:
+1- Lee los elementos de la tupla
+2- Crea una nueva lista
+3- Incluye en la nueva lista los valores de la tupla ordenados
+4- Almacena la lista en la variuable coleccion_ordenada"""
+""" print(coleccion_ordenada, tupla_desordenada) """
+
+#conversión lista a tupla
+""" lista_a_tupla = [1, 2, 3, 4, 5]
+conversion_a_tupla = tuple(lista_a_tupla)
+print(conversion_a_tupla, lista_a_tupla) """
+
+#conversión tupla a lista
+""" tupla_a_lista = 1, 2, 3, 4, 5
+conversion_a_lista = list(tupla_a_lista)
+print(conversion_a_lista, tupla_a_lista) """
+
+#Operar con tuplas: Puedo realizar operaciones de concatenación (+) y de multiplicación (*)
+
+""" tupla_uno = 1, 7, 3
+tupla_dos = 4, 2, 6
+concatenacion_tuplas = tupla_uno + tupla_dos
+repetir_tuplas = tupla_uno * 3
+print("Tuplas concatenadas:", concatenacion_tuplas, "\nTuplas repetidas:",repetir_tuplas) """
+
+#Ejemplos:
+
+""" tupla = 1, 4, 7
 print(tupla)
 print(tupla[1])
 
@@ -445,13 +481,14 @@ tercer_23 = tupla_index.index(23, 4, 7)#Los índices son del 0 al 6, pero para b
 print("Tercer índice donde está el 23:", tercer_23)
 
 #Práctica oficial:
-tupla_practica = 1, 2, 3, 50, 60, 70, 1, 2, 3, 50, 60, 70
+tupla_practica = 1, 2, 3, 50, 60, 70, 1, 2, 3, 50, 60, 70 """
+
 """  1- ¿Cuál es el index de la primera ocurrencia de 60?
  2- ¿Cuál es el index de la segunda ocurrrencia de 60?
  3- ¿Cuál es el index de la segunda ocurrencia de 2?
  4- ¿Cuál es el index de la primera ocurrencia de 3, entre los index 1 y 7?
  """
-primer_sesenta = tupla_practica.index(60)
+"""primer_sesenta = tupla_practica.index(60)
 print("Index primer sesenta:", primer_sesenta)
 segundo_sesenta = tupla_practica.index(60, 5)
 print("Index segundo sesenta:", segundo_sesenta)
@@ -459,3 +496,20 @@ segundo_dos = tupla_practica.index(2, 2)
 print("Index segundo dos:", segundo_dos)
 primer_tres_entre_index_uno_y_siete = tupla_practica.index(3, 1, 7)
 print("Index primer 3 entre index 1 y 7:", primer_tres_entre_index_uno_y_siete)
+
+tupla_longitud = 2, 45, 25, 2, 12, 52, 2, 5, 3, 2, 23, 23, 1
+print("Longitud de la tupla:", len(tupla_longitud))
+longitud = len(tupla_longitud)
+print(f"La longitud es: {longitud}.")
+
+tupla_desordenada = 1, 5, 2, 29, 29, 2, 28, 0, 12, -1
+coleccion_con_orden = sorted(tupla_desordenada)
+print(coleccion_con_orden)
+tupla_con_orden = tuple(coleccion_con_orden)
+print(tupla_con_orden) """
+
+tupla1 = 2, 5, 3
+tupla2 = 5, 1, 4
+concatenacion_tuplas = tupla1 + tupla2
+repeticion_tuplas = tupla1 * 3
+print(concatenacion_tuplas, repeticion_tuplas)
