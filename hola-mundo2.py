@@ -400,6 +400,22 @@ print("Asignación múltiple:",x, y, z) """
 lista_convertida_tupla = tuple(lista_inicial) #Casting de datos para convertir una lista en una tupla
 print("Tipo de lista convertida:", type(lista_convertida_tupla), "& Tipo de lista antes de la conversión:", type(lista_inicial)) """
 
+#Método count(): Este método nos devuelve el número de veces que aparece un valor en la tupla
+
+""" tupla_count = (1, 2, 3, 1, 2, 3, 1, 2, 3)
+veces_dos = tupla_count.count(2)
+print("\nNúmero de veces que aparece el valor 2: ",veces_dos) """
+
+#Método index(valor, [inicio], [fin]): Devuelve el índice de la primera ocurrencia de un valor en la tupla
+
+""" tupla_index = 10, 20, 30 , 40, 10, 50, 90, 10, 30, 40
+indice = tupla_index.index(10)
+print("\nIndex de la primera ocurrencia de 10: ", indice)
+indice_dos = tupla_index.index(10, 1)
+print("\nIndex de la segunda ocurrencia de 10: ", indice_dos)
+indice_tres = tupla_index.index(10, 5, 8)
+print("\nIndex de la ocurrencia de 10 entre los index 5 y 7: ", indice_tres) """
+
 tupla = 1, 4, 7
 print(tupla)
 print(tupla[1])
@@ -415,3 +431,31 @@ print(tupla_con_lista)
 tupla_valores = 4, 7, 8, 3
 a, b, c, d = tupla_valores
 print(a, b, c, d)
+
+tupla_contar = 7, 34, 7, 29, 28, 23, 4, 6, 7, 2, 5, 6, 6, 7
+valor_siete = tupla_contar.count(7)
+print("Veces que aparece el siete:", valor_siete)
+
+tupla_index = 23, 12, 123, 23, 5, 12, 23
+primer_12 = tupla_index.index(12)
+print("Primer índice donde sale el 12:", primer_12)
+primer_23_sin_contar_el_primero = tupla_index.index(23, 1, 6)
+print("Segundo índice donde sale el 23:", primer_23_sin_contar_el_primero)
+tercer_23 = tupla_index.index(23, 4, 7)#Los índices son del 0 al 6, pero para buscar hasta el final de la lista hay que poner el número total de elementos de la tupla
+print("Tercer índice donde está el 23:", tercer_23)
+
+#Práctica oficial:
+tupla_practica = 1, 2, 3, 50, 60, 70, 1, 2, 3, 50, 60, 70
+"""  1- ¿Cuál es el index de la primera ocurrencia de 60?
+ 2- ¿Cuál es el index de la segunda ocurrrencia de 60?
+ 3- ¿Cuál es el index de la segunda ocurrencia de 2?
+ 4- ¿Cuál es el index de la primera ocurrencia de 3, entre los index 1 y 7?
+ """
+primer_sesenta = tupla_practica.index(60)
+print("Index primer sesenta:", primer_sesenta)
+segundo_sesenta = tupla_practica.index(60, 5)
+print("Index segundo sesenta:", segundo_sesenta)
+segundo_dos = tupla_practica.index(2, 2)
+print("Index segundo dos:", segundo_dos)
+primer_tres_entre_index_uno_y_siete = tupla_practica.index(3, 1, 7)
+print("Index primer 3 entre index 1 y 7:", primer_tres_entre_index_uno_y_siete)
