@@ -422,7 +422,7 @@ print("La longitud de la tupla es:", len(tupla_longitud))
 longitud = len(tupla_longitud)
 print(f"La longitud es {longitud}") """
 
-#Método sorted(): Devuelve uns LISTA ordenada a partir de los elementos de la tupla. Yo NO ESTOY MODIFICANDO MI TUPLA (ni cambio el orden..), estoy creando una nueva colección de datos (lista) a partir de los datos existentes en la tupla. Hace un 2x1: convierte(convierte creando una nueva colección de datos, no incidiendo sobre la colección de datos original) + ordena
+#Método sorted(): Devuelve una LISTA ordenada a partir de los elementos de la tupla. Yo NO ESTOY MODIFICANDO MI TUPLA (ni cambio el orden..), estoy creando una nueva colección de datos (lista) a partir de los datos existentes en la tupla. Hace un 2x1: convierte(convierte creando una nueva colección de datos, no incidiendo sobre la colección de datos original) + ordena
 """ tupla_desordenada = 4, 6, 2, 7, 3, 5, 1, 8, 7, 0, 9
 coleccion_ordenada = sorted(tupla_desordenada) """
 """Esta instrucción realiza los siguientes pasos:
@@ -527,38 +527,80 @@ CARACTERÍSTICAS FUNDAMENTALES:
 """
 """ mi_primer_conjunto = {"elemento1", "elemento2", 3, 4, 4.1, True} #Se crea utilizando las {}
 print(mi_primer_conjunto)
-print("Este es mi primer conjunto:", mi_primer_conjunto)
+print("Este es mi primer conjunto:", mi_primer_conjunto)"""
 
-mi_primer_set = set([2, 5, 6, 2, 3, 4]) #También podemos crear conjuntos utilizando el método de constructor set()
-print(mi_primer_set) 
+#Ejemplo
+""" conjunto_autores = {"Federico García Lorca", "Carlos Ruiz-Zafón", "Miguel de Cervantes", "Paulo Coelho", "José Saramago", "Federico García Lorca", "Javier Cercas", "Miguel de Cervantes", "María Moliner", "Rosa Chacel"}
+print(conjunto_autores)
+ """
 
-conjunto_y_tupla = {1, 2, 3, (4, 5)}
+#También podemos crear conjuntos utilizando el método de constructor set()
+""" mi_primer_set = set([2, 5, 6, 2, 3, 4]) 
+print(mi_primer_set)  """
+
+""" conjunto_y_tupla = {1, 2, 3, (4, 5)}
 print("Conjunto y tupla:", conjunto_y_tupla) """
+
+#Ejemplo
+""" set_autores = set(["Federico García Lorca", "Miguel de Cervantes", "Paulo Coelho", "Miguel de Cervantes", "Rosa Chacel", "José Saramago"])
+print(set_autores) """
+
 
 #------------OPERACIONES CON CONJUNTOS-----------------
 #Conjuntos de referencia
 """ conjunto_uno = {1, 2, 3, 4, 5} 
 conjunto_dos = {5, 2, 8, 4, 0}  """
 
+#Ejemplo1
+""" conjunto1 = {1, 3, 5, 4, 9}
+conjunto2 = {2, 4, 6, 3, 0} """
+
 #Union (|) o union(): Une los conjuntos, sin respetar el orden de inserción y también pudiendo mezclar los valores de ambos conjuntos en la salida del nuevo conjunto creado. Devuelve un nuevo conjunto que contenga todos los elementos que estén en al menos 1 conjunto.
 """ union = conjunto_uno | conjunto_dos
 union_dos = conjunto_uno.union(conjunto_dos)
 print("Unión con tubería: ", union, "\nUnión con método union()", union_dos) """
+
+#Ejemplo2
+""" union1 = conjunto1 | conjunto2
+union2 = conjunto1.union(conjunto2)
+print("Unión con tubería:",union1,"\nUnión con método union:",union2) """
+
+#Además
+"""conjunto_mas_tupla = {1, 2, 3, (3, 5)}
+print(conjunto_mas_tupla)"""
 
 #Intersección (&) o .intersection(): Devuelve un nuevo conjunto que contiene todos los elementos que estan en los dos conjuntos.
 """ interseccion = conjunto_dos & conjunto_uno
 interseccion_dos = conjunto_uno.intersection(conjunto_dos)
 print("Interseccion con &:", interseccion, "\nIntersección con método intersection():", interseccion_dos) """
 
+#Ejemplo mío
+""" intersection1 = conjunto1 & conjunto2
+intersection2 = conjunto1.intersection(conjunto2)
+print("Intersección con &:",intersection1,"\nIntersección con intersection:",intersection2) """
+
 #Diferencia (-) o difference(): Devuelve un nuevo conjunto que contiene los elementos que están en el primer conjunto, pero no en el segundo.
 """ diferencia = conjunto_dos - conjunto_uno
 diferencia_dos = conjunto_uno.difference(conjunto_dos)
 print("Diferencia entre conjuntos:\n Diferencia con - :\n", diferencia,"\nDiferencia con método difference():\n", diferencia_dos) """
 
+#Mi ejemplo
+""" diferencia1 = conjunto1 - conjunto2
+diferencia2 = conjunto1.difference(conjunto2)
+print("Diferencia con -:",diferencia1,"\nDiferencia con difference",diferencia2)
+diferencia3 = conjunto2 - conjunto1
+print("Diferencia cambiando el orden:",diferencia3) """
+
 #Diferencia simétrica (^) o symmetric_difference(): Devuelve un nuevo conjunto que contenga todos los elementos que están en alguno de los conjuntos, pero no en ambos.
 """ diferencia_simetrica = conjunto_uno ^ conjunto_dos
 diferencia_simetrica_dos =  conjunto_dos.symmetric_difference(conjunto_uno)
 print("Diferencia simétrica con ^:", diferencia_simetrica,"\nDiferencia simétrica con método symmetric_difference()", diferencia_simetrica_dos) """
+
+
+#Mi ejemplo
+""" diferencia_simetrica = conjunto1 ^ conjunto2
+diferencia_simetrica_dos = conjunto1.symmetric_difference(conjunto2)
+print("Diferencia simétrica con ^:",diferencia_simetrica,"\nDiferencia simétrica con symmetric_difference:",diferencia_simetrica_dos) """
 
 #Subconjunto issubset(): Evaluamos si todos los elementos del primer conjunto están presentes en el segundo conjunto. Devuelve True si todos los elementos del primer están en el segundo y False de lo contrario.
 """ conjunto_tres = {1, 2, 3, 4, 5} 
@@ -573,37 +615,7 @@ print("Todos los valores del segundo conjunto están presentes en el primero:", 
 
 #Ejemplos
 
-""" conjunto_autores = {"Federico García Lorca", "Carlos Ruiz-Zafón", "Miguel de Cervantes", "Paulo Coelho", "José Saramago", "Federico García Lorca", "Javier Cercas", "Miguel de Cervantes", "María Moliner", "Rosa Chacel"}
-print(conjunto_autores)
-
-set_autores = set(["Federico García Lorca", "Miguel de Cervantes", "Paulo Coelho", "Miguel de Cervantes", "Rosa Chacel", "José Saramago"])
-print(set_autores)
-
-conjunto1 = {1, 3, 5, 4, 9}
-conjunto2 = {2, 4, 6, 3, 0}
-
-union1 = conjunto1 | conjunto2
-union2 = conjunto1.union(conjunto2)
-print("Unión con tubería:",union1,"\nUnión con método union:",union2)
-
-conjunto_mas_tupla = {1, 2, 3, (3, 5)}
-print(conjunto_mas_tupla)
-
-intersection1 = conjunto1 & conjunto2
-intersection2 = conjunto1.intersection(conjunto2)
-print("Intersección con &:",intersection1,"\nIntersección con intersection:",intersection2)
-
-diferencia1 = conjunto1 - conjunto2
-diferencia2 = conjunto1.difference(conjunto2)
-print("Diferencia con -:",diferencia1,"\nDiferencia con difference",diferencia2)
-diferencia3 = conjunto2 - conjunto1
-print("Diferencia cambiando el orden:",diferencia3)
-
-diferencia_simetrica = conjunto1 ^ conjunto2
-diferencia_simetrica_dos = conjunto1.symmetric_difference(conjunto2)
-print("Diferencia simétrica con ^:",diferencia_simetrica,"\nDiferencia simétrica con symmetric_difference:",diferencia_simetrica_dos)
-
-conjunto3 = {1, 2, 3, 4, 5}
+"""conjunto3 = {1, 2, 3, 4, 5}
 conjunto4 = {1, 2, 3, 4, 5, 6, 7, 8}
 subconjunto = conjunto3.issubset(conjunto4)
 print("¿Están todos los valores de conjunto3 en conjunto4?",subconjunto)
@@ -611,3 +623,146 @@ superconjunto = conjunto3.issuperset(conjunto4)
 print("¿Contiene conjunto3 todos los valores de conjunto4?",superconjunto)
 valores_faltantes = conjunto4 - conjunto3
 print("conjunto3 no tiene todos los valores de conjunto4: le faltan",valores_faltantes) """
+
+#*************** CONJUNTOS / SETS **********************
+
+#Bucle For para iterar sobre los elementos de mi set/conjunto
+""" conjunto_iterable = {5, 6, 7, 8}
+for elemento in conjunto_iterable:
+    print(elemento)
+print(conjunto_iterable)
+
+conjunto_iterable_dos = set([3, 4, 5, 6])
+for elemento_dos in conjunto_iterable_dos:
+    print(elemento_dos) """
+
+#Comprobar si un valor esta presente en mi conjunto
+""" presente_set = {"rojo", "azul", "verde"}
+color_seleccionado = str(input("Introduce un color:\n"))
+print(f"¿Esta el color {color_seleccionado} en mi set?",color_seleccionado in presente_set) """
+
+#Ejemplo
+""" conjunto = {1, 2, 3, 4}
+for elemento in conjunto:
+    print(elemento)
+lo_que_busco = int(input("Elemento a buscar: "))
+print(f"¿Está {lo_que_busco} en el conjunto?",lo_que_busco in conjunto)"""
+
+
+#-----------------MÉTODOS DE SETS/CONJUNTOS---------------
+
+#Método add(): Agregar un elemento al conjunto. Si el elemento que yo agrego YA EXISTE en el conjunto, no realizará ningún cambio. 
+""" conjunto_aniade = {1, 2, 3}
+conjunto_aniade.add(4)
+conjunto_aniade.add(2)
+print(conjunto_aniade) """
+
+#Ejemplo 2
+""" otro_conjunto = {"rojo", "azul", "amarillo"}
+otro_conjunto.add("verde")
+print(otro_conjunto) """
+
+#Método remove(): Eliminar un elemento de mi conjunto pasándole el valor del elemento por argumentos. Si el elemento no está en mi conjunto, me devolverá un error. 
+""" conjunto_borrar = {1, 2, 3}
+conjunto_borrar.remove(2)
+#conjunto_borrar.remove(4) #KeyError
+print(conjunto_borrar) """
+
+#Otro ejemplo
+""" tercer_conjunto = {2, 4, 6}
+tercer_conjunto.remove(2)
+print(tercer_conjunto)
+#tercer_conjunto.remove(8)
+#print(tercer_conjunto)  #Este código arrojaría una excepción si se ejecutara """
+
+#Método discard(): Eliminar un elemento de mi conjunto pasándole el valor del elemento por argumentos. Si el elemento no está en mi conjunto, NO REALIZA NINGUN CAMBIO Y TAMPOCO ME GENERA UN ERROR. 
+""" conjunto_descartar = {1, 2, 3}
+conjunto_descartar.discard(2)
+conjunto_descartar.discard(4) #--> No me devuelve un KeyError
+print(conjunto_descartar) """
+
+#Otro ejemplo
+""" cuarto_conjunto = {2, 4, 6}
+cuarto_conjunto.remove(2)
+cuarto_conjunto.discard(8)
+print(tercer_conjunto) """
+
+#Método clear(): Elimina TODOS los elementos de mi conjunto
+""" conjunto_limpiar = {1, 2, 3, 4}
+conjunto_limpiar.clear()
+print(conjunto_limpiar) #Devuelve set() --> Un conjunto/set vacio """
+
+#Ejemplo2
+"""conjunto.clear()
+otro_conjunto.clear()
+tercer_conjunto.clear()
+cuarto_conjunto.clear()
+(print(conjunto,otro_conjunto,tercer_conjunto,cuarto_conjunto)) """
+
+#Método len(): Devuelve la cantidad de elementos que están presentes en mi conjunto/set.
+""" conjunto_longitud = {1, 2, 3, 4, 5, 7, 7, 6, 5, 6}
+print("El número de elementos en mi conjunto es:", len(conjunto_longitud))
+longitud = len(conjunto_longitud)
+print("El número de elementos en mi conjunto es:", longitud) """
+
+#Ejemplo
+""" conjunto = {4, 6, 21, 9, 239, 2, 29, 29, 7}
+largo = len(conjunto)
+print("Tamaño del conjunto:",largo) """
+
+#Método copy(): Crea una copia superficial del conjunto
+""" conjunto_a_copiar = {9, 8, 7, 6}
+conjunto_copiado = conjunto_a_copiar.copy()
+print("Conjunto original: ", conjunto_a_copiar)
+print("Conjunto copiado: ", conjunto_copiado) """
+
+#Ejemplo2
+""" conjunto_original = {34, 2, 23, 23, 17}
+conjunto_copia = conjunto_original.copy()
+print("Conjunto original:", conjunto_original)
+print("Copia del conjunto original:",conjunto_copia) """
+
+#Método update(): Nos permite agregar elementos de otro conjunto, de una lista o de otro iterable a nuestro conjunto actual. Como parámetros le pasamos el iterable cuyos elementos se van a agregar a mi conjunto actual. NO DEVUELVE UN NUEVO CONJUNTO, MODIFICA EL CONJUNTO ACTUAL.
+""" conjunto_a_actualizar = {1, 2, 3, 4}
+lista_a_agregar = [4, 5, 6]
+conjunto_actualizado = conjunto_a_actualizar.update(lista_a_agregar)
+print("Conjunto actualizado con lista nos devuelve None porque este método modifica el conjunto original pero no almacena o devuelve ningún otro valor explícito: ", conjunto_actualizado)
+print("Conjunto actualizado con lista: ", conjunto_a_actualizar) """
+
+#Mi ejemplo
+""" conjunto = {1, 2, 3, 4}
+lista = [4, 5]
+conjunto.update(lista)
+print(conjunto) """
+
+#-----------------MÉTODOS DE PYTHON---------------
+
+#Método split(): se utiliza EN CADENAS DE TEXTO para dividirlas en una lista de subcadenas. Podemos incluir el separador como parámetro y va a representar el caracter o la cadena que se utilizará como separador. Es opcional. Si no lo especificamos, el método split() va a tomar como referencia los espacios en blanco entre las palabras como separador por defecto.
+#Separador "-"
+""" frase_uno = "Hola-que tal"
+lista_palabras_uno = frase_uno.split("-")
+print("Lista de palabras separadas por guión: ", lista_palabras_uno) """
+#Separador ","
+""" frase_dos = "Hola,que,tal"
+lista_palabras_dos = frase_dos.split(",")
+print("Lista de palabras separadas por comas: ", lista_palabras_dos) """
+#Sin separador
+""" frase_tres = "Hola que tal"
+lista_palabras_tres = frase_tres.split()
+print("Lista de palabras sin separador: ", lista_palabras_tres) """
+
+#Otro ejemplo
+""" frase = "A ver, qué pasa, ¿y eso?"
+separacion1 = frase.split()
+separacion2 = frase.split(",")
+separacion3 = frase.split("y")
+print("Frase original:",frase)
+print("Separación sin caracter a indicar:",separacion1)
+print("Separación con comas:",separacion2)
+print("Separación con letra y:",separacion3) """
+
+#Update con split
+""" conjunto = {"Hola", "Adiós"}
+nuevo = ["Qué tal,familia"]
+conjunto.update(nuevo[0].split(",")) #Separamos la frase en una lista de palabras
+print("Nuevo conjunto: ", conjunto) """
