@@ -800,7 +800,7 @@ print(mi_segundo_diccionario) """
 )
 print(mi_tercer_diccionario) """
 
-diccionario_uno = {
+""" diccionario_uno = {
     "Nombre": 'Juan Raimundo',
     "Apellido": 'Álvaro Núñez',
     "Edad": 42,
@@ -848,7 +848,26 @@ dic3 = dict(
 
 print(dic1, dic2, dic3)
 
+#Accedo a los valores de un diccionario por clave en formato index
+valor_nombre = mi_tercer_diccionario["Nombre"] 
+print(valor_nombre)
 
+#Accedo a los valores de un diccionario por clave con el método get() al cual le pasamos como parámetro la clave a la que quiero acceder.
+valor_edad = mi_tercer_diccionario.get("Edad")
+print("La edad de Paco el de las naranjas es:", valor_edad)
+
+#Modificar un diccionario
+diccionario_modificable = {
+    "Nombre": "Pepa",
+    "Edad": 50,
+    "Ciudad": "Barcelona"
+}
+diccionario_modificable["Nombre"] = "María" 
+#diccionario_modificable.get("Edad") = 23 --> SyntaxError porque get() directamente no me va a permitir cambiar el dato
+diccionario_modificable["Carnet"] = True #Cuando accedo a un KEY que no existe, se añade automáticamente al diccionario
+print(diccionario_modificable)
+
+ """
 """INCISO
 
 #Modificar la cadena a capitalize() #hacer que la primera palabra del string comience en mayúscula
@@ -859,13 +878,12 @@ print("Esto es un capitalize:",nombre_capitalize)
 nombre_title = valor_nombre.title()
 print("Esto es un título:",nombre_title)"""
 
-valor_nombre = dic2["Apellidos"]
+""" valor_nombre = dic2["Apellidos"]
 print(valor_nombre.capitalize())
 
 valor_nombre = dic2["Apellidos"]
-print(valor_nombre.title())
+print(valor_nombre.title()) """
 
-#INCISO
 """
 
 #Los diccionarios pueden ser anidados
@@ -912,7 +930,7 @@ print(diccionario_anidado)"""
 print(anidado_dos) """
 
 
-edad = diccionario_uno.get("Edad")
+""" edad = diccionario_uno.get("Edad")
 print("Edad de Juan:",edad)
 edad2 = diccionario_dos["Edad"]
 print("Edad de Juan",edad2)
@@ -925,4 +943,4 @@ diccionario_mutable = {
 
 diccionario_mutable["Nombre"] = "Juan Raimundo"
 diccionario_mutable["Ciudad"] = "Betanzos"
-print(diccionario_mutable)
+print(diccionario_mutable) """
