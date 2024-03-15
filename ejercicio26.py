@@ -20,47 +20,36 @@
     - Asegúrate de manejar correctamente la entrada del usuario (separadores, uso de mayúsculas y minúsculas y realizar las conversiones necesarias de datos utilizando casting de datos.
     - Recuerda usar la función **`split()`** para dividir la entrada del usuario en elementos separados y el método **`update()`** para agregar elementos a los conjuntos. """
 
-#Previo. Bienvenida
-print("Bienvenido a la Biblioteca de videojuegos Akira Toriyama.")
+aventura = set()
+accion = set()
+estrategia = set()
+deportes = set()
 
-#1. Creación de conjuntos de videojuegos: los defino como set porque sólo con las llaves me salen diccionarios
-conjunto_aventura = set()
-conjunto_accion = set()
-conjunto_estrategia = set()
-conjunto_deportes = set()
+# Solicitar al usuario que ingrese videojuegos para cada categoría
+print("Bienvenido a la gestión de la biblioteca de videojuegos.")
+print("Ingresa los videojuegos para cada categoría separados por comas.")
 
-#2. Añadir videojuegos a conjuntos: pongo inputs y los asigno a otras variables
-mas_juegos_aventura = (str(input("Introduzca sus videojuegos de aventura separados por comas sin espacios: ")))
-mas_juegos_accion = (str(input("Introduzca sus videojuegos de acción separados por comas sin espacios: ")))
-mas_juegos_estrategia = (str(input("Introduzca sus videojuegos de estrategia separados por comas sin espacios: ")))
-mas_juegos_deportes = (str(input("Introduzca sus videojuegos de deportes separados por comas sin espacios: ")))
+# Pedir al usuario que ingrese los videojuegos para cada categoría
+aventura_input = str(input("Videojuegos de aventura: ")).lower()
+accion_input = str(input("Videojuegos de acción: ")).lower()
+estrategia_input = str(input("Videojuegos de estrategia: ")).lower()
+deportes_input = str(input("Videojuegos de deportes: ")).lower()
 
-#3.1 Convertir cadenas en conjuntos: pongo en mayúsculas los videojuegos y los asigno a unas terceras variables, luego a éstas les aplico un split con comas y las añado a los conjuntos
-juegos_aventura = mas_juegos_aventura.upper()
-juegos_accion = mas_juegos_accion.upper()
-juegos_estrategia = mas_juegos_estrategia.upper()
-juegos_deportes = mas_juegos_deportes.upper()
-#3.2 Añadir con update: añado los separadores a los conjuntos originales
-conjunto_aventura.update(juegos_aventura.split(","))
-conjunto_accion.update(juegos_accion.split(","))
-conjunto_estrategia.update(juegos_estrategia.split(","))
-conjunto_deportes.update(juegos_deportes.split(","))
+# Actualizar conjuntos con los videojuegos ingresados por el usuario
+aventura.update(aventura_input.split(","))
+accion.update(accion_input.split(","))
+estrategia.update(estrategia_input.split(","))
+deportes.update(deportes_input.split(","))
 
-#4. Resumen categorías videojuegos
-print(f"\nLa categoría de videojuegos de aventura contiene los videojuegos {conjunto_aventura}, que contiene {len(conjunto_aventura)} videojuegos.")
-print(f"\nLa categoría de videojuegos de acción contiene los videojuegos {conjunto_accion}, que contiene {len(conjunto_accion)} videojuegos.")
-print(f"\nLa categoría de videojuegos de estrategia contiene los videojuegos {conjunto_estrategia}, que contiene {len(conjunto_estrategia)} videojuegos.")
-print(f"\nLa categoría de videojuegos de deportes contiene los videojuegos {conjunto_deportes}, que contiene {len(conjunto_deportes)} videojuegos.")
+# Mostrar resumen de categorías y cantidad de videojuegos en cada una
+print("\nResumen de categorías de videojuegos:")
+print(f"Aventura ({len(aventura)}): {aventura}")
+print(f"Acción ({len(accion)}): {accion}")
+print(f"Estrategia ({len(estrategia)}): {estrategia}")
+print(f"Deportes ({len(deportes)}): {deportes}")
 
-#5. Usando operadores: uso intersection para los juegos en aventura o acción, difference para los juegos en estrategia que no estén en deportes, y unions encadenadas para todos los juegos únicos (aclaro que en mis listas no repite ninguno en ninguna categoría)
-juegos_en_aventura_o_accion = conjunto_aventura.intersection(conjunto_accion)
-print("\nVideojuegos de aventura o acción:",juegos_en_aventura_o_accion)
-
-juegos_en_estrategia_pero_no_en_deportes = conjunto_estrategia.difference(conjunto_deportes)
-print("\nVideojuegos de estrategia que no están en deportes:",juegos_en_estrategia_pero_no_en_deportes)
-
-todos_los_videojuegos_unicos = conjunto_aventura.union(conjunto_accion.union(conjunto_estrategia.union(conjunto_deportes)))
-print("\nTodos los videojuegos únicos en todas las categorías:",todos_los_videojuegos_unicos)
-
-#Post. Adiós
-print("\n¡Gracias por venir!")
+# Operaciones con conjuntos
+print("\nOperaciones con conjuntos:")
+print("Videojuegos de acción y aventura:", accion.intersection(aventura))
+print("Videojuegos de estrategia pero no de deportes:", estrategia.difference(deportes))
+print("Todos los videojuegos únicos en todas las categorías:", aventura.union(accion, estrategia, deportes))
