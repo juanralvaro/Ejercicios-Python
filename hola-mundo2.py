@@ -766,3 +766,163 @@ print("Separación con letra y:",separacion3) """
 nuevo = ["Qué tal,familia"]
 conjunto.update(nuevo[0].split(",")) #Separamos la frase en una lista de palabras
 print("Nuevo conjunto: ", conjunto) """
+
+#*************** DICCIONARIOS **********************
+"""
+Colecciones de datos que nos van a permitir almacenar elementos con formato "clave":valor.
+Clave --> KEY, keys(): Siempre van entre comillas dobles, pueden ir también entre comillas simples, pero las reglas de estilo recomiendan dobles para las claves
+Valor --> VALUE, values() :Siempre van entre comillas, pueden ir entre comillas dobles o simples, pero las reglas de estilo recomiendan simples para las claves
+Elementos  --> Entries, items()
+ """
+
+#diccionario_vacio = {} #creamos un diccionario vacio
+#conjunto_vacio = set()
+""" mi_primer_diccionario = {
+    "nombre": 'pepe',
+    "edad":  30,
+    "ciudad": "Málaga"
+}
+print(mi_primer_diccionario) """
+
+#Crear un diccionario con método constructor dict()
+""" mi_segundo_diccionario = dict([ 
+    ("Nombre","Juan"), #Utilizamos comas para separar las claves y el valor
+    ("apellido","Rodríguez"), #utilizamos comas para separar cada uno de los elementos de nuestros diccionarios (pares clave,valor), los cuales incluímos entre paréntesis
+    ("Edad", 12)
+])
+print(mi_segundo_diccionario) """
+
+#Crear un diccionario con método constructor dict() versión II:
+""" mi_tercer_diccionario = dict(
+    Nombre='Paco',
+    Edad=45,
+    Ciudad="Madrid"
+)
+print(mi_tercer_diccionario) """
+
+diccionario_uno = {
+    "Nombre": 'Juan Raimundo',
+    "Apellido": 'Álvaro Núñez',
+    "Edad": 42,
+    "Ciudad": 'Betanzos',
+    "Provincia": 'A Coruña'
+}
+
+diccionario_dos = dict([
+    ("Nombre",'Juan Raimundo'),
+    ("Apellidos",'Álvaro Núñez'),
+    ("Edad",42),
+    ("Residencia",'Betanzos'),
+    ("Provincia",'A Coruña')
+])
+
+diccionario_tres = dict(
+    Nombre="Juan Raimundo",
+    Apellidos="Álvaro Núñez",
+    Edad=42,
+    Ciudad="Betanzos",
+    Comunidad="Galicia"
+)
+
+print(diccionario_uno)
+print(diccionario_dos)
+print(diccionario_tres)
+
+dic1 = {
+    "Juan":'nombre',
+    "Álvaro":'apellido',
+    "núñez":'segundo_apellido'
+}
+
+dic2 = dict([
+    ("Edad", 3),
+    ("Nombre", 'Juan'),
+    ("Apellidos", 'álvaro núñez')
+])
+
+dic3 = dict(
+    Nombre='Juan',
+    Apellido='Álvaro',
+    Edad=32
+)
+
+print(dic1, dic2, dic3)
+
+
+"""INCISO
+
+#Modificar la cadena a capitalize() #hacer que la primera palabra del string comience en mayúscula
+nombre_capitalize = valor_nombre.capitalize()
+print("Esto es un capitalize:",nombre_capitalize)
+
+#Modificar la cadena a title() #hacer que todas las palabras del string comiencen en mayúscula
+nombre_title = valor_nombre.title()
+print("Esto es un título:",nombre_title)"""
+
+valor_nombre = dic2["Apellidos"]
+print(valor_nombre.capitalize())
+
+valor_nombre = dic2["Apellidos"]
+print(valor_nombre.title())
+
+#INCISO
+"""
+
+#Los diccionarios pueden ser anidados
+diccionario_anidado = {
+    "clave": {
+        "valor1": "dato1",
+        "valor2": "dato2",
+        "valor3": "dato3",
+    },
+    "clave2": "string1"
+}
+"""
+
+#Ejemplo
+
+""" diccionario_anidado = {
+    "persona1":{
+        "Nombre":"Juan",
+        "Apellido":"Álvaro"
+    },
+    "persona2":{
+        "Nombre":"María",
+        "Apellido":"González"
+    },
+    "persona3":{
+        "Nombre":"Alejandra",
+        "Apellido":"Espinosa"
+    },
+    "persona4":{
+        "Nombre":"Gema",
+        "Apellido":"Carmona"
+    }
+}
+
+print(diccionario_anidado)"""
+
+""" anidado_dos = {
+    "Persona":{
+        "Nombre":'Juan',
+        "Apellido":'Álvaro'
+    },
+    "Profesión":'Empresario'
+}
+print(anidado_dos) """
+
+
+edad = diccionario_uno.get("Edad")
+print("Edad de Juan:",edad)
+edad2 = diccionario_dos["Edad"]
+print("Edad de Juan",edad2)
+
+diccionario_mutable = {
+    "Nombre": 'Juan',
+    "Apellido": 'Álvaro',
+    "Edad": 42
+}
+
+diccionario_mutable["Nombre"] = "Juan Raimundo"
+diccionario_mutable["Ciudad"] = "Betanzos"
+print(diccionario_mutable)
