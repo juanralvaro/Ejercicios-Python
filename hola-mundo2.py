@@ -944,3 +944,98 @@ diccionario_mutable = {
 diccionario_mutable["Nombre"] = "Juan Raimundo"
 diccionario_mutable["Ciudad"] = "Betanzos"
 print(diccionario_mutable) """
+
+""" ¿Qué debo tener en cuenta al definir las claves de mis diccionarios?
+
+· Naming: Es recomendable utilizar nombres descriptivos y significativos para las claves, de modo que reflejen el tipo de datos que representan. Por ejemplo, en un diccionario que almacena información de una persona, las claves podrían ser 'nombre', 'apellido', 'edad', etc.
+
+· Duplicados: Las claves en un diccionario deben ser únicas. Si se intenta agregar una clave que ya existe, el valor asociado con esa clave se actualizará con el nuevo valor. Por lo tanto, es importante asegurarse de que las claves sean únicas para evitar la pérdida de datos.
+
+· Inmutabilidad (de las claves de un diccionario, no de los valores, los valores son mutables): Las claves de un diccionario deben ser objetos inmutables, lo que significa que no pueden cambiar de valor después de ser creadas. Esto generalmente limita las claves a tipos de datos inmutables como cadenas, enteros y tuplas. Las listas y otros diccionarios no pueden usarse como claves porque son mutables.
+
+· Hashable: Para que un objeto pueda ser utilizado como clave en un diccionario, debe ser "hashable", es decir, debe poder generar un valor hash único que se utilizará para buscar y almacenar la clave en la tabla hash interna del diccionario. 
+
+· Caracteres especiales: Las claves de un diccionario pueden incluir caracteres especiales como guiones bajos (_), guiones (-), números, letras y otros caracteres especiales, siempre que cumplan con las reglas de nomenclatura de Python y sean "hashable"."""
+
+#Acceder a diccionarios anidados: Para acceder a los elementos de los diccionarios anidados al diccionario principal, simplemente utilizamos la notación de corchetes [ ] y el nombre de la clave correspondiente. Podemos acceder a cualquier nivel de anidación dentro del diccionario principal utilizando la notación de corchetes y las claves adecuadas.
+contacto = {
+    'nombre': 'Juan',
+    'apellido': 'Gómez',
+    'edad': 30,
+    'telefono': '123456789',
+    'nombre': 'Pepe', #En claves modificadas prevalece el valor que sea dispuesto en último lugar
+    'email': 'juan@example.com',
+    'direccion': {
+        'calle': 'Calle Principal',
+        'numero': '123',
+        'ciudad': 'Ciudad Principal',
+        'codigo_postal': '12345',
+        'pais': 'País Principal'
+    },
+    'redes_sociales': {
+        'twitter': '@juan_gomez',
+        'facebook': 'JuanGomez',
+        'instagram': 'juangomezofficial'
+    },
+    'intereses': ['viajes', 'lectura', 'deporte']
+}
+
+# Acceder al número de teléfono
+"""print("Teléfono:", contacto['telefono'])"""
+
+# Acceder al número de casa de la dirección
+"""print("Número de casa:", contacto['direccion']['numero'])"""
+
+# Acceder al código postal
+"""print("El código postal es:",contacto['direccion']['codigo_postal'])"""
+
+# Acceder a la ciudad principal
+"""print("La ciudad principal es:",contacto['direccion']['ciudad'])"""
+
+# Acceder al nombre de usuario de Twitter
+"""print("Usuario de Twitter:", contacto['redes_sociales']['twitter'])"""
+
+# Acceder al primer interés
+"""print("Primer interés:", contacto['intereses'][0])"""
+
+
+
+#--------------------MÉTODOS DICCIONARIOS------------------
+
+#Método clear(): Elimina todos los elementos del diccionario, dejándolo vacío.
+"""diccionario = {'a': 1, 'b': 2, 'c': 3}
+diccionario.clear()
+print(diccionario)  # Salida: {}"""
+
+#Método copy(): Devuelve una copia superficial del diccionario.
+"""diccionario_copia = diccionario.copy()
+print(diccionario_copia)  # Salida: {'a': 1, 'b': 2, 'c': 3}"""
+
+#Método get(): devuelve el valor de una clave especificada. Si la clave no existe, devuelve un valor predeterminado (None si no se especifica otro valor)
+""" valor = diccionario.get('b')
+print(valor)  # Salida: 2 """
+
+#Método items(): Devuelve todos los pares clave-valor en el diccionario como tuplas.
+""" pares = diccionario.items()
+print(pares)  # Salida: dict_items([('a', 1), ('b', 2), ('c', 3)]) """
+
+#Método keys(): Devuelve una lista de todas las claves en el diccionario.
+""" claves = diccionario.keys()
+print(claves)  # Salida: dict_keys(['a', 'b', 'c']) """
+
+#Método values(): Devuelve todos los valores en el diccionario.
+""" valores = diccionario.values()
+print(valores)  # Output: dict_values([1, 2, 3]) """
+
+#Ejemplos
+""" total_contactos = contacto.items()
+total_claves = contacto.keys()
+total_valores = contacto.values()
+
+print("Contactos totales:\n",total_contactos)
+print("Claves totales:\n",total_claves)
+print("Valores totales:\n",total_valores)
+
+valor1 = contacto.get("nombre")
+
+print(valor1) """
