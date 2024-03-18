@@ -20,32 +20,28 @@
     - Se puede utilizar cualquier tema o contexto para los programas, siempre y cuando se respeten los requisitos del ejercicio.
     - Se recomienda que los programas sean lo suficientemente desafiantes para que los otros grupos tengan que esforzarse en resolver los problemas planteados. """
 
-comunidad_de_vecinos = {
-    "Piso": '',
-    "Nombre": '',
-    "Apellidos": '',
-    "Pago": '',
-    "Garaje": '',
-    "Ninos": ''
+
+"""
+ EJERCICIO RETO DE PROGRAMACIÓN II - ¡ENCUENTRA LOS FALLOS! (Revisado)
+ AUTORES: Manuel,Juan,Rafael y Jordi. 
+ Enunciado: 
+ Diseñar un avanzado algoritmo o programa en Python que acepte el registro de
+ un propietario de una comunidad de vecinos y muestre por pantalla los datos. 
+
+
+ """
+
+# Recogida de datos para un propietario usando un diccionario
+Propietario = {
+    "nombre": str(input("Introduce el nombre del propietario: ")),
+    'piso':   int(input("Introduce el piso: ")),
+    "puerta": str(input("Introduce la puerta: ")),
+    "moroso": bool(input("¿Es moroso? (True/False): ")),
+    "garaje": bool(input("¿Tiene garaje? (True/False): "))
 }
 
-comunidad_de_vecinos["Piso"] = str(input("Introduzca el nombre del piso: "))
-comunidad_de_vecinos["Nombre"] = str(input("Introduzca el nombre del propietario: "))
-comunidad_de_vecinos["Apellidos"] = str(input("Introduzca los apellidos del propietario: "))
-comunidad_de_vecinos["Pago"] = bool(input("¿Ha pagado la comunidad del mes? Diga True o False: "))
-comunidad_de_vecinos["Garaje"] = bool(input("¿Tiene plaza de garaje? Diga True o False: "))
-comunidad_de_vecinos["Ninos"] = int(input("¿Tiene niños?: "))
 
-print(comunidad_de_vecinos)
 
-for piso in comunidad_de_vecinos:
-    print(f"{comunidad_de_vecinos.get("Piso")}")
-
-""" for vecino in comunidad_de_vecinos:
-    print(f"{comunidad_de_vecinos.get("Nombre", "Apellidos")}")
-
-for vecino in comunidad_de_vecinos:
-    print(f"{comunidad_de_vecinos.get("Pago")}")
-
-for garaje in comunidad_de_vecinos:
-    print(f"{comunidad_de_vecinos.get("Garaje", "Apellidos")}") """
+# Mostrando los datos recogidos
+for clave, valor in Propietario.items():
+    print(f"{clave.capitalize()}: {valor}")

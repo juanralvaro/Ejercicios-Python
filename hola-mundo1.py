@@ -19,7 +19,7 @@ en bloque: Los comentarios son fragmentos de código que son ignoradas por el in
 
 """ #print(nombre) """
 
-#namning de las variables --> Minúyscula + snake_case """
+#namning de las variables --> Minúscula + snake_case """
 
 """ mi_nombre_es = "Alejandra" #str (String)
 dato_numero = 2888 #int (Entero)
