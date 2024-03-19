@@ -68,6 +68,9 @@ print("Cambio 3:",contactos_ordenados)
 diccionario_de_contactos.clear()
 print("Cambio 4:",diccionario_de_contactos)
 
+#5. Control de cambios
+#Se han ido viendo durante el ejercicio, como se dijo en el enunciado.
+
 #6. Opción de salida
 opcion_de_salida = bool(input("¿Quiere salir? Diga True si sí, False si no. "))
 
