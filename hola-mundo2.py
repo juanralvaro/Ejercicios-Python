@@ -945,9 +945,9 @@ diccionario_mutable["Nombre"] = "Juan Raimundo"
 diccionario_mutable["Ciudad"] = "Betanzos"
 print(diccionario_mutable) """
 
-""" ¿Qué debo tener en cuenta al definir las claves de mis diccionarios?
+#¿Qué debo tener en cuenta al definir las claves de mis diccionarios?
 
-· Naming: Es recomendable utilizar nombres descriptivos y significativos para las claves, de modo que reflejen el tipo de datos que representan. Por ejemplo, en un diccionario que almacena información de una persona, las claves podrían ser 'nombre', 'apellido', 'edad', etc.
+"""· Naming: Es recomendable utilizar nombres descriptivos y significativos para las claves, de modo que reflejen el tipo de datos que representan. Por ejemplo, en un diccionario que almacena información de una persona, las claves podrían ser 'nombre', 'apellido', 'edad', etc.
 
 · Duplicados: Las claves en un diccionario deben ser únicas. Si se intenta agregar una clave que ya existe, el valor asociado con esa clave se actualizará con el nuevo valor. Por lo tanto, es importante asegurarse de que las claves sean únicas para evitar la pérdida de datos.
 
@@ -1003,8 +1003,8 @@ contacto = {
 #--------------------MÉTODOS DICCIONARIOS------------------
 
 #Método clear(): Elimina todos los elementos del diccionario, dejándolo vacío.
-"""diccionario = {'a': 1, 'b': 2, 'c': 3}
-diccionario.clear()
+diccionario = {'a': 1, 'b': 2, 'c': 3}
+"""diccionario.clear()
 print(diccionario)  # Salida: {}"""
 
 #Método copy(): Devuelve una copia superficial del diccionario.
@@ -1027,6 +1027,37 @@ print(claves)  # Salida: dict_keys(['a', 'b', 'c']) """
 """ valores = diccionario.values()
 print(valores)  # Output: dict_values([1, 2, 3]) """
 
+#Método pop(): Elimina un elemento por su clave y devuelve su valor. Si la clave no existe, lanza una excepción KeyError. ELIMINA + ALMACENA EL VALOR ELIMINADO
+""" diccionario = {'a': 1, 'b': 2, 'c': 3}
+valor_eliminado = diccionario.pop('a')
+print("Valor eliminado: ", valor_eliminado, "\n Diccionario sin el valor 'a':", diccionario) """
+
+#Método popitem(): Elimina y devuelve el último par clave-valor insertado en el diccionario. La salida de este par será una tupla. Si el diccionario esta vacio, nos va arrojar un KeyError. NO ADMITE ARGUMENTOS
+""" par_eliminado = diccionario.popitem()
+print("\n Par eliminado: ", par_eliminado, "\n Diccionario sin los valores del par eliminado:", diccionario)
+par_eliminado_dos = diccionario.popitem() #Aquí el diccionario se queda vacio
+#par_eliminado_tres = diccionario.popitem() --> KeyError: 'popitem(): dictionary is empty
+print("diccionario final:", diccionario) """
+
+#update(): Este método actualiza el dicionario con los elementos de otro diccionario. También puede actualizar el diccionario con pares CLAVE=VALOR proporcionados al métodos como argumentos (de palabra clave)
+""" diccionario_uno = {'a': 1, 'b': 2}
+diccionario_dos = {'c': 3, 'd': 4}
+diccionario_uno.update(diccionario_dos)
+print("\nDiccionario uno:", diccionario_uno, "\nDiccionario dos:", diccionario_dos)
+diccionario_dos.update(diccionario_uno)
+print("\nDiccionario uno, 2º parte:", diccionario_uno, "\nDiccionario dos. 2º parte:", diccionario_dos)
+diccionario_uno.update(e=5, f=6)
+print(diccionario_uno)"""
+
+#Método setdefault(): Devuelve el valor de UNA clave que nosotros le especificamos pasándola como argumento. A diferencia del método get(), si la clave no existe, nos la va a insertar en el diccionario con el valor que le hemos especificado (Si no le especificamos un valor, la incluye con el valor None)
+""" valor_setdefault = diccionario_uno.setdefault('g', 20)
+valor_setdefault_dos = diccionario_uno.setdefault('h', 10)
+valor_setdefault_tres = diccionario_uno.setdefault('i')
+print(valor_setdefault)
+print(valor_setdefault_dos)
+print(valor_setdefault_tres)
+print(diccionario_uno) """
+
 #Ejemplos
 """ total_contactos = contacto.items()
 total_claves = contacto.keys()
@@ -1039,3 +1070,114 @@ print("Valores totales:\n",total_valores)
 valor1 = contacto.get("nombre")
 
 print(valor1) """
+
+""" elimino_valor = diccionario.pop('b')
+print("Valor eliminado:",elimino_valor,"\nDiccionario actualizado:", diccionario)
+
+elimino_valor_dos = diccionario.popitem()
+print("Valor eliminado:", elimino_valor_dos,"\nDiccionario actualizado",diccionario)
+
+elimino_valor_tres = diccionario.popitem()
+print("Valor eliminado:", elimino_valor_tres,"\nDiccionario actualizado:",diccionario)
+
+elimino_valor_cuatro = diccionario.popitem()
+print("Valor eliminado:",elimino_valor_cuatro,"\nDiccionario actualizado:",diccionario)
+
+dictionary_one = {"one": 1, "two": 2}
+dictionary_two = {"three": 3, "four": 4}
+dictionary_one.update(dictionary_two)
+print("Diccionario 1:",dictionary_one,"\nDiccionario 2:",dictionary_two)
+dictionary_two.update(dictionary_one)
+print("Diccionario 1 again:",dictionary_one,"\nDiccionario 2 again:",dictionary_two)
+dictionary_one.update(five=5, six=6)
+print(dictionary_one)
+valor_setdefault = dictionary_one.setdefault("five")
+print(valor_setdefault)
+valor_setdefault_dos = dictionary_one.setdefault('seven', 7)
+print(valor_setdefault_dos)
+valor_setdefault_tres = dictionary_one.setdefault('eight')
+print(valor_setdefault_tres)
+print(dictionary_one)
+dictionary_one.update(eight=8)
+print(dictionary_one) """
+
+#------------ITERANDO UN DICCIONARIO------------
+"""
+Bucle for: En Python se utiliza para iterar sobre una secuencia (listas, tuplas o diccionarios), con el objetivo de ejecutar un bloque de código una vez para cada uno de los elementos de esa secuencia. Sintaxis:
+
+for elemento in secuencia:
+    # Bloque de código a ejecutar
+"""
+
+#Ejemplo de iteración básica sobre un diccionario (solo una variable que empaqueta todo el elemento)
+""" diccionario = {
+    'perro': 'animal que ladra',
+    'gato': 'animal que maulla',
+    'pájaro': 'animal que pia'
+    } """
+
+""" for elemento in diccionario: #Cuando estoy iterando sobre un diccionario, el bucle for de forma predeterminada itera sobre las claves. Es decir, cuando estamos iterando sobre un diccionario que contiene elementos (pares CLAVE - VALOR), la variable que definimos para identificar cada uno de esos elementos itera sobre la clave
+    print(elemento, ":", diccionario[elemento]) """
+
+#Iterando diccionarios con el método items(): Este método devuelve cada uno de los elementos del diccionario como una tupla. Por ende, cada tupla tiene dos objetos dentro (la clave y el valor)
+""" for clave, valor in diccionario.items():
+    print(clave, ":", valor) """
+
+
+#Iterando diccionarios con el método keys(): Este método en iteraciones sobre diccionarios nos va a devolver las claves del diccionario. 
+""" for clave in diccionario.keys():
+    print("La clave es: ", clave)
+    print("El valor es:", diccionario[clave]) #Como no estoy iterando sobre los valores en el bucle for, para poder acceder a ellos necesitaré hacerlo a través de la clave """
+
+#Iterando diccionarios con el método values(): Este método en iteraciones sobre diccionarios nos va a devolver los valores del diccionario. 
+""" for valor in diccionario.values():
+    print("-El valor es: ", valor) """
+
+semana = {
+    "Primer día": "Lunes",
+    "Segundo día": "Martes",
+    "Tercer día": "Miércoles",
+    "Cuarto día": "Jueves",
+    "Quinto día": "Viernes",
+    "Sexto día": "Sábado",
+    "Séptimo día": "Domingo",
+}
+
+for dia in semana:
+    print(dia,":",semana[dia])
+
+for dia, nombre in semana.items():
+    print(dia,":",nombre)
+
+for dia in semana.keys():
+    print("El orden del día es:",dia)
+    print("El día se llama", semana[dia]) #Es un extra que no existe al revés en values()
+
+for nombre in semana.values():
+    print("El día de la semana se llama:",nombre)
+
+ventas_enero = {
+    "ratón": 70,
+    "teclados": 100,
+    "pantallas": 50
+}
+productos_vendidos = 0
+
+for producto, cantidad in ventas_enero.items():
+    productos_vendidos += cantidad
+
+print(productos_vendidos)
+
+productos_vendidos_dos = 0
+
+for cantidad in ventas_enero.values():
+    productos_vendidos_dos += cantidad
+
+print(productos_vendidos_dos)
+
+productos_vendidos_tres = 0
+
+for producto in ventas_enero.keys():
+    productos_vendidos_tres += ventas_enero[producto]
+
+print(productos_vendidos_tres)
