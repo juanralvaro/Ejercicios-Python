@@ -245,14 +245,6 @@ print("La longitud de la lista es: ",len(lista_longitud))"""
 """nueva_lista_tres = [1, 2, 3, 1, 3, 2, 3, 3, 3, 3]
 print("Hay", nueva_lista_tres.count(2), "elementos '2' en la lista.")"""
 
-#Método len(): Comprueba la longitud o número de elementos de una lista
-""" lista_longitud = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-print("La longitud de la lista es: ",len(lista_longitud)) """
-
-#Método count(): Devuelve el número de ocurrencias de un elemento en la lista
-""" nueva_lista_tres = [1, 2, 3, 1, 3, 2, 3, 3, 3, 3]
-print("Hay", nueva_lista_tres.count(2), "elementos '2' en la lista.") """
-
 #Método pop(): Elimina y devuelve el elemento que se encuentra en la posición indicada, o el último elemento si no se proporciona un índice.
 """ lista_pop = [0, 1, 2, 3, 4, 1]
 elemento = lista_pop.pop(4)# Resultado: lista=[1, 3], elemento=2
@@ -846,48 +838,46 @@ dic3 = dict(
     Edad=32
 )
 
-print(dic1, dic2, dic3)
+print(dic1, dic2, dic3)"""
 
 #Accedo a los valores de un diccionario por clave en formato index
-valor_nombre = mi_tercer_diccionario["Nombre"] 
-print(valor_nombre)
+""" valor_nombre = mi_tercer_diccionario["Nombre"] 
+print(valor_nombre) """
 
 #Accedo a los valores de un diccionario por clave con el método get() al cual le pasamos como parámetro la clave a la que quiero acceder.
-valor_edad = mi_tercer_diccionario.get("Edad")
-print("La edad de Paco el de las naranjas es:", valor_edad)
+""" valor_edad = mi_tercer_diccionario.get("Edad")
+print("La edad de Paco el de las naranjas es:", valor_edad) """
 
 #Modificar un diccionario
-diccionario_modificable = {
+""" diccionario_modificable = {
     "Nombre": "Pepa",
     "Edad": 50,
     "Ciudad": "Barcelona"
 }
-diccionario_modificable["Nombre"] = "María" 
+diccionario_modificable["Nombre"] = "María"  """
 #diccionario_modificable.get("Edad") = 23 --> SyntaxError porque get() directamente no me va a permitir cambiar el dato
-diccionario_modificable["Carnet"] = True #Cuando accedo a un KEY que no existe, se añade automáticamente al diccionario
-print(diccionario_modificable)
+#diccionario_modificable["Carnet"] = True #Cuando accedo a un KEY que no existe, se añade automáticamente al diccionario
+"""print(diccionario_modificable)"""
 
- """
-"""INCISO
+"""INCISO"""
 
 #Modificar la cadena a capitalize() #hacer que la primera palabra del string comience en mayúscula
-nombre_capitalize = valor_nombre.capitalize()
-print("Esto es un capitalize:",nombre_capitalize)
+""" nombre_capitalize = valor_nombre.capitalize()
+print("Esto es un capitalize:",nombre_capitalize) """
 
 #Modificar la cadena a title() #hacer que todas las palabras del string comiencen en mayúscula
-nombre_title = valor_nombre.title()
+"""nombre_title = valor_nombre.title()
 print("Esto es un título:",nombre_title)"""
 
 """ valor_nombre = dic2["Apellidos"]
 print(valor_nombre.capitalize())
 
 valor_nombre = dic2["Apellidos"]
-print(valor_nombre.title()) """
+print(valor_nombre.title()) 
 
-"""
-
+ """
 #Los diccionarios pueden ser anidados
-diccionario_anidado = {
+"""diccionario_anidado = {
     "clave": {
         "valor1": "dato1",
         "valor2": "dato2",

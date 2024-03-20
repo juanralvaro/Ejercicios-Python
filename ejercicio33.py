@@ -8,8 +8,8 @@
 2. **Operaciones con la Lista de Tareas Pendientes:**
     - Utiliza el método **`append()`** para agregar una nueva tarea a la lista de tareas pendientes.
     - Utiliza el método **`remove()`** para eliminar una tarea específica de la lista de tareas pendientes.
-    - Utiliza el método **`clear()`** para vaciar la lista de tareas pendientes.
     - Utiliza el método **`sort()`** para ordenar las tareas pendientes alfabéticamente.
+    - Utiliza el método **`clear()`** para vaciar la lista de tareas pendientes.
 3. **Operaciones con el Conjunto de la Lista de Compras:**
     - Utiliza el método **`add()`** para agregar un nuevo ítem a la lista de compras.
     - Utiliza el método **`discard()`** para eliminar un ítem específico de la lista de compras.
@@ -17,8 +17,8 @@
 4. **Operaciones con el Diccionario de Contactos:**
     - Utiliza el método **`update()`** para agregar nuevos contactos al diccionario de contactos.
     - Utiliza el método **`pop()`** para eliminar un contacto específico del diccionario de contactos.
-    - Utiliza el método **`clear()`** para vaciar el diccionario de contactos.
     - Utiliza el método **`sorted()`** para ordenar los contactos por nombre y mostrarlos en orden alfabético.
+    - Utiliza el método **`clear()`** para vaciar el diccionario de contactos.
 5. **Mostrar Resultados:**
     - Después de cada operación, muestra el estado actual de cada colección de datos.
 6. **Finalizar el Programa:**
@@ -43,7 +43,7 @@ tareas_pendientes.append("limpiar los cristales")
 print("Cambio 1:",tareas_pendientes)
 tareas_pendientes.remove("cocinar")
 print("Cambio 2:",tareas_pendientes)
-#tareas_pendientes.clear() -> lo dejo para el final para que el ejercicio con sort tenga sentido
+tareas_pendientes.sort()
 print("Cambio 3:",tareas_pendientes)
 tareas_pendientes.clear()
 print("Cambio 4:",tareas_pendientes)
@@ -61,7 +61,6 @@ diccionario_de_contactos.update(Paula=672391932)
 print("Cambio 1:",diccionario_de_contactos)
 diccionario_de_contactos.pop("José")
 print("Cambio 2:",diccionario_de_contactos)
-#diccionario_de_contactos.clear() -> lo dejo para el final para que el ejercicio con sorted tenga sentido
 contactos_a_ordenar = diccionario_de_contactos.keys()
 contactos_ordenados = sorted(contactos_a_ordenar)
 print("Cambio 3:",contactos_ordenados)
@@ -72,7 +71,8 @@ print("Cambio 4:",diccionario_de_contactos)
 #Se han ido viendo durante el ejercicio, como se dijo en el enunciado.
 
 #6. Opción de salida
-opcion_de_salida = bool(input("¿Quiere salir? Diga True si sí, False si no. "))
+salir = str(input("¿Quiere salir?: ")).lower()
+print(f"Usted ha dicho {salir} a salir.")
 
 #Despedida
 print("Gracias por usar el gestor. ¡Buen día!")
