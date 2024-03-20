@@ -10,61 +10,56 @@
 10. Utiliza el método **`items()`** para obtener una lista de tuplas, donde cada tupla contiene una clave y su valor correspondiente en la agenda.
 11. Utiliza el método **`setdefault()`**  para comprobar si tenemos apuntado el teléfono de tu profesora, y si no está apuntado, que lo incluya en tu diccionario. """
 
-#Bienvenida
-print("Bienvenido a la agenda telefónica de su móvil.")
-
-#1. Creación de la agenda
+# Paso 1: Crear el diccionario inicial
 agenda_telefonica = {
-    "Juan": 923912918,
-    "María": 951292913,
-    "Andrés": 698923972,
-    "Patricia": 698237233,
-    "Mario": 912872029
+    "Juan": "123456789",
+    "María": "987654321",
+    "Pedro": "456789123",
+    "Ana": "321654987",
+    "Luis": "654321789"
 }
-print("Agenda telefónica original:",agenda_telefonica)
 
-#2. Borrado de datos
+# Paso 2: Limpiar el diccionario
 agenda_telefonica.clear()
-print("Agenda telefónica borrada:",agenda_telefonica)
+print("Diccionario después de limpiar:", agenda_telefonica)
 
-#3. Añadido de datos
-nuevos_contactos = {"Paula": 881902312, "Sergio": 981232912, "Antonio":664013487}
+# Paso 3: Agregar nuevos contactos
+nuevos_contactos = {
+    "Carlos": "111222333",
+    "Sofía": "444555666"
+}
 agenda_telefonica.update(nuevos_contactos)
-print("Agenda actualizada:",agenda_telefonica)
+agenda_telefonica.update(Luis="666666666")
+print("Diccionario después de agregar nuevos contactos:", agenda_telefonica)
 
-#4. Copia de datos
-agenda_copia = agenda_telefonica.copy()
-print("Agenda original copiada:",agenda_copia,".\nAgenda actual:",agenda_telefonica)
-print("¿ID's iguales?",id(agenda_copia), id(agenda_telefonica))
+# Paso 4: Crear una copia del diccionario original
+copia_agenda = agenda_telefonica.copy()
+print("Copia del diccionario original:", copia_agenda)
 
-#5. Get
-valor1 = agenda_telefonica.get("Juan")
-valor2 = agenda_telefonica.get("Sandra", 823782372)
-print("Teléfonos obtenidos:",valor1, valor2)
+# Paso 5: Obtener números de teléfono con el método get()
+print("Número de teléfono de Juan:", agenda_telefonica.get("Juan"))
+print("Número de teléfono de Luis:", agenda_telefonica.get("Luis"))
+print("Número de teléfono de Ana (no existe):", agenda_telefonica.get("Ana", "No encontrado"))
 
-#6. Hacer pop
-valor_eliminado_pop = agenda_telefonica.pop("Sergio")
-print("Valor eliminado:",valor_eliminado_pop,". Agenda actualizada:",agenda_telefonica)
+# Paso 6: Eliminar un contacto con el método pop()
+telefono_pedro = agenda_telefonica.pop("Pedro")
+print("Teléfono de Pedro eliminado:", telefono_pedro)
+print("Diccionario después de eliminar a Pedro:", agenda_telefonica)
 
-#7. Hacer popitem
-valor_eliminado_popitem = agenda_telefonica.popitem()
-print("Valor eliminado",valor_eliminado_popitem,". Agenda actualizada",agenda_telefonica)
+# Paso 7: Eliminar el último contacto con el método popitem()
+ultimo_contacto_eliminado = agenda_telefonica.popitem()
+print("Último contacto eliminado:", ultimo_contacto_eliminado)
+print("Diccionario después de eliminar el último contacto:", agenda_telefonica)
 
-#8. Lista de llaves
-llaves = agenda_telefonica.keys()
-print("Llaves de la agenda",llaves)
+# Paso 8: Obtener una lista de claves con el método keys()
+print("Claves en la agenda:", agenda_telefonica.keys())
 
-#9. Lista de valores
-valores = agenda_telefonica.values()
-print("Valores de la agenda",valores)
+# Paso 9: Obtener una lista de valores con el método values()
+print("Valores en la agenda:", agenda_telefonica.values())
 
-#10. Items de la agenda
-items = agenda_telefonica.items()
-print("Items de la agenda", items)
+# Paso 10: Obtener una lista de tuplas clave-valor con el método items()
+print("Elementos en la agenda:", agenda_telefonica.items())
 
-#11. Uso de setdefault
-valor_set_default = agenda_telefonica.setdefault('Alejandra', 624871454)
-print("Teléfono de la profesora",valor_set_default,". Agenda actualizada",agenda_telefonica)
-
-#Despedida
-print("Gracias por usar la agenda. Hasta la próxima.")
+# Paso 11: Comprobar si tenemos el teléfono de la profesora en la agenda
+telefono_profesora = agenda_telefonica.setdefault('Alejandra')
+print("Teléfono profesora:", agenda_telefonica.items())
