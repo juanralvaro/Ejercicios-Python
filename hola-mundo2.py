@@ -1092,10 +1092,9 @@ dictionary_one.update(eight=8)
 print(dictionary_one) """
 
 #------------ITERANDO UN DICCIONARIO------------
-"""
-Bucle for: En Python se utiliza para iterar sobre una secuencia (listas, tuplas o diccionarios), con el objetivo de ejecutar un bloque de código una vez para cada uno de los elementos de esa secuencia. Sintaxis:
+#Bucle for: En Python se utiliza para iterar sobre una secuencia (listas, tuplas o diccionarios), con el objetivo de ejecutar un bloque de código una vez para cada uno de los elementos de esa secuencia. Sintaxis:
 
-for elemento in secuencia:
+"""for elemento in secuencia:
     # Bloque de código a ejecutar
 """
 
