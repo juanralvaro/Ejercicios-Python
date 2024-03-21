@@ -13,11 +13,11 @@
 
 #1. Definir tupla
 tupla_numeros = (1, 5, 2, 8, 3)
-print("Tupla números", tupla_numeros)
+print("Tupla números: ", tupla_numeros)
 
 #2. Definir conjunto
 conjunto_numeros = {1, 5, 2, 8, 3}
-print("Conjunto números", conjunto_numeros)
+print("Conjunto números: ", conjunto_numeros)
 
 #3. Añadir a conjunto
 conjunto_numeros.add(9)
@@ -74,4 +74,4 @@ conjunto_desde_tupla.symmetric_difference(conjunto_a_diferenciar_simetricamente)
 print("Diferencia simétrica de conjuntos: ", conjunto_desde_tupla.symmetric_difference(conjunto_a_diferenciar_simetricamente))
 
 #10. Diferencias
-print("Tal y como está definido, no hay diferencias... más allá de que las tuplas son desordenadas y los conjuntos no.")
+print("Tal y como está definido el ejercicio, no hay diferencias... más allá de que los elementos de las tuplas están desordenados y los de los conjuntos no.")
