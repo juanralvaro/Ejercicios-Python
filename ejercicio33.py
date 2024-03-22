@@ -24,55 +24,42 @@
 6. **Finalizar el Programa:**
     - Proporciona una opción para que el usuario pueda salir del programa cuando lo desee. """
 
-#Bienvenida
-print("Bienvenido al gestor de lista de tareas, conjunto de lista de compras y diccionario de contactos.")
+# Creación de las colecciones de datos
+tareas_pendientes = ['Hacer la compra', 'Estudiar para el examen', 'Llamar al médico', 'Enviar correo electrónico', 'Preparar la cena']
+lista_compras = {'Manzanas', 'Leche', 'Pan', 'Huevos', 'Arroz'}
+agenda_contactos = {'Juan': '123456789', 'María': '987654321', 'Carlos': '456789123', 'Ana': '321654987', 'Luisa': '654321987'}
 
-#1. Creación de lista, colección y diccionario
-tareas_pendientes = ["cocinar", "poner la lavadora", "fregar", "planchar",  "hacer la compra"]
-lista_de_compras = {"carne", "pescado", "lejía", "pan", "verduras"}
-diccionario_de_contactos = {
-    "José": 989232911,
-    "María": 686113434,
-    "Pedro": 926238712,
-    "Ángeles": 682329212,
-    "Antonio": 987232812
-}
-
-#2. Operaciones con la lista de tareas pendientes
-tareas_pendientes.append("limpiar los cristales")
-print("Cambio 1:",tareas_pendientes)
-tareas_pendientes.remove("cocinar")
-print("Cambio 2:",tareas_pendientes)
+# Operaciones con la lista de tareas pendientes
+tareas_pendientes.append('Sacar al perro')
+print("Tareas pendientes después de agregar una nueva tarea:", tareas_pendientes)
+tareas_pendientes.remove('Llamar al médico')
+print("Tareas pendientes después de eliminar una tarea:", tareas_pendientes)
 tareas_pendientes.sort()
-print("Cambio 3:",tareas_pendientes)
+print("Tareas pendientes ordenadas alfabéticamente:", tareas_pendientes)
 tareas_pendientes.clear()
-print("Cambio 4:",tareas_pendientes)
+print("Tareas pendientes después de vaciar la lista:", tareas_pendientes)
 
-#3. Operaciones con el conjunto de la lista de compras
-lista_de_compras.add("queso")
-print("Cambio 1:",lista_de_compras)
-lista_de_compras.discard("carne")
-print("Cambio 2:",lista_de_compras)
-lista_de_compras.clear()
-print("Cambio 3:",lista_de_compras)
+# Operaciones con el conjunto de la lista de compras
+lista_compras.add('Cerveza')
+print("Lista de compras después de agregar un ítem:", lista_compras)
+lista_compras.discard('Leche')
+print("Lista de compras después de eliminar un ítem:", lista_compras)
+lista_compras.clear()
+print("Lista de compras después de vaciar el conjunto:", lista_compras)
 
-#4. Operaciones con el diccionario de contactos
-diccionario_de_contactos.update(Paula=672391932)
-print("Cambio 1:",diccionario_de_contactos)
-diccionario_de_contactos.pop("José")
-print("Cambio 2:",diccionario_de_contactos)
-contactos_a_ordenar = diccionario_de_contactos.keys()
-contactos_ordenados = sorted(contactos_a_ordenar)
-print("Cambio 3:",contactos_ordenados)
-diccionario_de_contactos.clear()
-print("Cambio 4:",diccionario_de_contactos)
+# Operaciones con el diccionario de contactos
+nuevos_contactos = {'Pedro': '654987321', 'Elena': '789456123'}
+agenda_contactos.update(nuevos_contactos)
+print("Agenda de contactos después de agregar nuevos contactos:", agenda_contactos)
 
-#5. Control de cambios
-#Se han ido viendo durante el ejercicio, como se dijo en el enunciado.
+# Ordenar los contactos por nombre y mostrarlos en orden alfabético
+contactos_ordenados = sorted(agenda_contactos.items())
+print("Contactos ordenados alfabéticamente:", contactos_ordenados)
 
-#6. Opción de salida
-salir = str(input("¿Quiere salir?: ")).lower()
-print(f"Usted ha dicho {salir} a salir.")
+# Eliminar un contacto específico del diccionario de contactos
+agenda_contactos.pop('María')
+print("Agenda de contactos después de eliminar un contacto:", agenda_contactos)
 
-#Despedida
-print("Gracias por usar el gestor. ¡Buen día!")
+# Vaciar el diccionario de contactos
+agenda_contactos.clear()
+print("Agenda de contactos después de vaciar el diccionario:", agenda_contactos)
