@@ -84,3 +84,19 @@ print("\nGracias por usar la calculadora de Python. ¡Buen día!")
  """
 #NOTA
 """if num1 < 6: print("El número es menor que 6"), print("Esto es sintácticamente correcto")""" #Es correcto pero no recomendable
+
+#FUNCIÓN range(): Genera una secuencia de números enteros. Puede tomar argumentos
+
+""" for i in range(5):
+    print(i)
+
+for i in range(4, 8): #Me devuelve una iteración del 1 al 4, porque el número final no lo incluye
+    print(i)
+
+for i in range(0, 10, 2): #Devuelve los numeros pares del 0 al 8 (inicio, final, incremento)
+    print(i) """
+
+""" personas = int(input("Introduce el nunero de personas"))
+
+for i in range(personas):
+    print("Otra persona") """

@@ -41,17 +41,16 @@ nombres_plantas = list(enciclopedia_plantas.values())
 
 #3. Agregar una nueva planta
 nueva_planta = {
-    "Planta 4":{
         "nombre" : str(input("Introduzca el nombre científico de la planta: ")),
         "especie" : str(input("Introduzca la especie de la planta: ")),
         "familia" : str(input("Introduzca la familia de la planta: ")),
         "origen" : str(input("Introduzca el origen de la planta: ")),
         "altura" : float(input("Introduzca el tamaño de la planta en metros: ")),
         "usos" : str(input("Introduzca los usos de la planta: "))
-    }
+    
 }
 enciclopedia_plantas.update(nueva_planta)
-nombres_plantas = list(enciclopedia_plantas.values()) #Supongo que habrá otro método para actualizar inmediatamente
+nombres_plantas.append(nueva_planta)
 print(nombres_plantas)
 
 #4. Imprimir información de las plantas
