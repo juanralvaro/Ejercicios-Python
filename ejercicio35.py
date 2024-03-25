@@ -39,7 +39,7 @@ for anio in peliculas.values():
     es_1995 = anio == 1995
     print("¿Es el año del estreno 1995?",es_1995)
     anio_nuevo = anio
-    print(f"El año {anio_nuevo} fue asignado a la variable 'año_nuevo'.")
+    print(f"El año {anio_nuevo} fue asignado a la variable 'anio_nuevo'.")
 
 #5. Conclusión
 print("Gracias por venir al gestor de películas.")
