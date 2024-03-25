@@ -8,15 +8,15 @@ Si la edad está entre 20 y 64 años (inclusive), mostrar el mensaje "Eres un ad
 Si la edad es 65 o mayor, mostrar el mensaje "Eres un adulto mayor".
 Mostrar el mensaje correspondiente al rango de edad detectado para cada persona. """
 
-numero_personas = int(input("Introduce el número de personas: "))
+numero_personas = int(input("Introduzca el número de personas a consultar edad: "))
 
 for persona in range(numero_personas):
-    edad = int(input("Ingrese su edad: "))
+    edad = int(input(f"Ingrese la edad de la persona {persona+1}: "))
     if edad >= 0 and edad < 13:
-        print("Eres un niño.")
+        print("Es un niño.")
     elif edad >= 13 and edad < 20:
-        print("Eres un adolescente.")
+        print("Es un adolescente.")
     elif edad >= 20 and edad < 65:
-        print("Eres un adulto.")
+        print("Es un adulto.")
     else:
-        print("Eres un adulto mayor.")
+        print("Es un adulto mayor.")
