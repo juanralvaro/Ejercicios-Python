@@ -100,3 +100,114 @@ for i in range(0, 10, 2): #Devuelve los numeros pares del 0 al 8 (inicio, final,
 
 for i in range(personas):
     print("Otra persona") """
+
+#Operador ternario: Es el operador condicional que me permite escribir un condicional de forma compacta
+
+
+""" xy = 11
+resultado_xy = "positivo" if xy > 0 else "negativo" """
+"""
+variable = -resultado si condición que se ejecuta es verdadero- + -condición booleana a evaluar (comenzando con el if)- + -else + resultado si condición que se ejecuta si es falsa-
+
+Esto equivale a:
+
+xy = 11
+if xy > 0:
+    resultado = "positivo"
+else:
+    resultado = "negativo"
+print(resultado)
+
+"""
+
+
+#------ EJEMPLOS -------
+#1- Asignación de valor a una variable basado en una condición
+
+""" edad = int(input("Introduce tu edad"))
+mensaje = "Eres mayor de edad, bienvenido, puedes acceder" if edad >= 18 else "Eres menor de edad, lo sentimos, tienes el acceso restringido"
+print(mensaje) """
+
+"""--> Ejercicio anterior pero pidiendo el año de nacimiento
+
+anio_nacimiento = int(input("Introduce tu año de nacimiento: "))
+mensaje_dos = "Eres mayor de edad, bienvenido." if anio_nacimiento <= 2006 else "Eres menor de edad, ¡no puedes pasar!"
+print(mensaje_dos) """
+
+#2- Impresión condicional de un mensaje
+""" xyz = 5
+print("El número es 7" if xyz == 7 else "No es 7") """
+
+"""
+--> Solicita a un estudiante que te diga su nota, y en función de la nota imprime un mensaje diciendo que ha aprobado u otro diciendo que ha suspendido. Para ello utiliza la sintaxis del ejemplo que acabamos de ver.
+
+
+nota = float(input("Introduce tu nota: "))
+print("¡Has aprobado!" if nota >= 5 else "¡Has suspendido!") """
+
+""" edad = int(input("Introduce tu edad: \n"))
+print("Eres mayor de edad" if edad >= 18 else "Eres menor de edad") """
+
+#3- Modificar el valor de una variable
+""" numero = int(input("Introduce un número\n"))
+numero -= 1 if numero > 0 else numero
+print(numero) """
+
+"""
+[código si verdadera]+[condicion]+[código si falsa]
+--> Si la edad del usuario es positiva, dile cuantos años tenía el año pasado
+
+edad_usuario = int(input("Introduce tu edad\n"))
+edad_usuario -= 1 if edad_usuario > 0 else edad_usuario
+print("Edad el año pasado",edad_usuario) """
+
+# --------- BUCLE WHILE -------------
+""" 
+En python se utiliza para ejecutar un bloque de cíodigo de forma repetida mientras se interprete como verdadera la condición dada
+
+while -condicion-:
+    #Código que vamos a ejecutar mientras la condición sea verdadera
+"""
+
+numero = 7
+while numero <= 20:
+    print("El número es", numero)
+    numero += 1 
+
+infinito = 0
+while True:
+    print("bucle infinito")
+    infinito += 1
+    if infinito == 15:
+        break
+print("C'est fini")
+
+"""
+--> Utiliza una condición diferente para implementar el bucle infinito
+"""
+
+""" infinito = 0
+while True:
+    print("Bucle infinito")
+    infinito +=2
+    if infinito == 10:
+        break
+print("Se acabó") """
+
+# ELSE + WHILE: La sección de código del else se ejecuta cuando el bucle while se haya interrumpido de forma natural. Si interrumpo el bucle while utilizando un break, el código tras else no se va a ejecutar
+
+""" x = 10
+while x > 0:
+    x -= 1
+    print(x)
+else:
+    print("X ha llegado a cero") """
+
+""" x = 12
+while x > 0:
+    x -= 2
+    print("x =",x)
+    if x == 4:
+        break
+else:
+    print("Se acabó el bucle. No hay más iteraciones.") """
