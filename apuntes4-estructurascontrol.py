@@ -169,7 +169,7 @@ while -condicion-:
     #Código que vamos a ejecutar mientras la condición sea verdadera
 """
 
-numero = 7
+""" numero = 7
 while numero <= 20:
     print("El número es", numero)
     numero += 1 
@@ -180,7 +180,7 @@ while True:
     infinito += 1
     if infinito == 15:
         break
-print("C'est fini")
+print("C'est fini") """
 
 """
 --> Utiliza una condición diferente para implementar el bucle infinito
@@ -211,3 +211,43 @@ while x > 0:
         break
 else:
     print("Se acabó el bucle. No hay más iteraciones.") """
+
+#-------ANIDACIÓN EN LOS BUCLES-----------
+"""
+
+nombres = ["Juan", "María", "Carlos"]
+saludos = ["Hola", "Adiós"]
+
+for nombre in nombres: #El bucle externo es el que controla el flujo general de la iteración
+    for saludo in saludos: #Se ejecuta completamente en cada ciclo del bucle externo
+        print(saludo, nombre)
+
+
+for numero in range(1, 6):
+    for numero_dos in range(1, 11):
+        print(numero * numero_dos, end="\t") #Por defecto, el caracter de salida al final de un print() siempre es un salto de línea; "\t" marca como caracter de salida tabulación
+    print()
+
+#-----------------------------
+for nombre in nombres:
+    for saludo in saludos:
+        print(f"¡{saludo},  {nombre}!") #Quedaría mejor """
+
+for num1 in range(1, 11):
+    for num2 in range(1, 11):
+        print(num1 * num2, end="\t")
+    print()
+
+""" print("a","b","c", sep="-") #sep: separador
+print("Hola", end="\t") #end: modifico el caracter de salida
+print("Mundo") """
+
+for i in range(5): #Secuencia 0, 1, 2, 3, 4. Bucle externo FILAS
+    for j in range(i+1): #Bucle interno COLUMNAS | secuencia= 0+1, 1+1, 2+1, 3+1, 4+1
+        print("*", end=" ") #Imprime un asterisco + espacio por cada columna
+    print() #Imprime una nueva línea al final de cada columna
+
+for filas in range(10):
+    for columnas in range(filas+1):
+        print("^", end=" ")
+    print() #1 ^ en fila 1, 2 ^ en la 2, ... 10 ^ en la 10

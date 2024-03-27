@@ -12,35 +12,36 @@
 print("Bienvenido a la calculadora de Python.")
 
 
-
-
+# Inicialización del bucle principal
 while True:
-    num1 = int(input("Introduzca el primer número: "))
-    num2 = int(input("Introduzca el segundo número: "))
-    print("Operaciones disponibles:")
-    print("\n1: Suma.")
-    print("\n2: Resta:")
-    print("\n3: Multiplicación.")
-    print("\n4: División.")
-    operacion = int(input("\nSeleccione una operación: "))
-    if operacion == 1:
+
+# Solicitar al usuario que ingrese dos números
+    num1 = float(input("Ingrese el primer número: "))
+    num2 = float(input("Ingrese el segundo número: "))
+    
+    # Solicitar al usuario que seleccione un operador matemático
+    operador = input("Ingrese el operador matemático (+, -, *, /): ")
+    
+    # Realizar la operación correspondiente según el operador seleccionado
+    if operador == '+':
         resultado = num1 + num2
-        print(resultado)
-    elif operacion == 2:
+    elif operador == '-':
         resultado = num1 - num2
-        print(resultado)
-    elif operacion == 3:
+    elif operador == '*':
         resultado = num1 * num2
-        print(resultado)
-    elif operacion == 4:
-        if num2 !=0 :
+    elif operador == '/':
+        # Manejar la división por cero
+        if num2 != 0:
             resultado = num1 / num2
-            print(resultado)
         else:
-            print("No se puede dividir por cero.")
-    else:
-        print("Número erróneo. Introduzca el correcto:")
-    continuar = str(input("¿Desea continuar? (S/N): ")) == "S" #Inicializo una variable booleana para que el usuario diga si seguir o no, si es S (True) sigue, si no (False) hará break
-    if not continuar:
-        break
-print("Gracias por usar la calculadora de Python.")
+            print("Error: No se puede dividir entre cero.")
+            continue  # Volver al inicio del bucle
+        
+    # Mostrar el resultado de la operación
+    print("El resultado es:", resultado)
+    
+    # Preguntar al usuario si desea continuar o salir del programa
+    continuar = input("¿Desea continuar? (s/n): ")
+    if continuar.lower() != 's':
+        print("Gracias por usar la calculadora. ¡Hasta luego!")
+        break  # Salir del bucle principal
