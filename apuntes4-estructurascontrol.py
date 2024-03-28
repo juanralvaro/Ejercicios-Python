@@ -238,6 +238,13 @@ for num1 in range(1, 11):
         print(num1 * num2, end="\t")
     print()
 
+""" for num1 in range(1, 11):
+    for num2 in range(1, 11):
+        for num3 in range(1, 11):
+            print(num1 * num2 * num3, end="\t")
+        print()
+    print() """ #multiplicando al cubo en 10 estructuras
+
 """ print("a","b","c", sep="-") #sep: separador
 print("Hola", end="\t") #end: modifico el caracter de salida
 print("Mundo") """
@@ -247,7 +254,14 @@ for i in range(5): #Secuencia 0, 1, 2, 3, 4. Bucle externo FILAS
         print("*", end=" ") #Imprime un asterisco + espacio por cada columna
     print() #Imprime una nueva línea al final de cada columna
 
-for filas in range(10):
+""" for i in range(5):
+    for j in range(i+1):
+        for k in range(j):
+            print("*", end=" ")
+        print()
+    print() """ #aparición gradual de estrellas
+
+""" for filas in range(10):
     for columnas in range(filas+1):
         print("^", end=" ")
-    print() #1 ^ en fila 1, 2 ^ en la 2, ... 10 ^ en la 10
+    print() #1 ^ en fila 1, 2 ^ en la 2, ... 10 ^ en la 10 """
