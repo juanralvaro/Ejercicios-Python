@@ -233,10 +233,10 @@ for nombre in nombres:
     for saludo in saludos:
         print(f"¡{saludo},  {nombre}!") #Quedaría mejor """
 
-for num1 in range(1, 11):
+""" for num1 in range(1, 11):
     for num2 in range(1, 11):
         print(num1 * num2, end="\t")
-    print()
+    print() """
 
 """ for num1 in range(1, 11):
     for num2 in range(1, 11):
@@ -249,10 +249,10 @@ for num1 in range(1, 11):
 print("Hola", end="\t") #end: modifico el caracter de salida
 print("Mundo") """
 
-for i in range(5): #Secuencia 0, 1, 2, 3, 4. Bucle externo FILAS
+""" for i in range(5): #Secuencia 0, 1, 2, 3, 4. Bucle externo FILAS
     for j in range(i+1): #Bucle interno COLUMNAS | secuencia= 0+1, 1+1, 2+1, 3+1, 4+1
         print("*", end=" ") #Imprime un asterisco + espacio por cada columna
-    print() #Imprime una nueva línea al final de cada columna
+    print() #Imprime una nueva línea al final de cada columna """
 
 """ for i in range(5):
     for j in range(i+1):
@@ -265,3 +265,106 @@ for i in range(5): #Secuencia 0, 1, 2, 3, 4. Bucle externo FILAS
     for columnas in range(filas+1):
         print("^", end=" ")
     print() #1 ^ en fila 1, 2 ^ en la 2, ... 10 ^ en la 10 """
+
+# ----- FUNCIONES EN PYTHON --------
+"""
+Una  función en Python es un bloque de código que se puede llamar desde cualquier lugar del programa. Estas funciones permiten organizar la ejecución de nuestro programa. SINTAXIS:
+def nombre_funcion(argumentos de entrada):
+    bloque de código
+    return valor devuelto (opcional)
+ """
+#Ejemplo 1
+def suma(a, b):
+    return a - b
+print("La sumatoria es:", suma(6,3))
+
+# Ejemplo 2
+def Suma(a, b):
+    sumatorio = a + b
+    print("La sumatoria es:", sumatorio)
+    return (sumatorio) #Utilizamos return para comunicar el resultado de una función de vuelta al código que la ha llamado. Nos permite que ese resultado se almacene o se utilice en futuras operaciones
+
+sum = Suma(5, 5)
+
+#Ejemplo 3
+def suma_dos(a, b):
+    print("La sumatoria es:",a + b)
+suma_dos(10, 5)
+
+numero = 100 * sum
+print(numero)
+
+#Ejemplo función saludar: Utilizar variables globales dentro de mi función.
+""" nombre_usuario = str(input("Ingrese su nombre: \n"))
+
+def saluda():
+    print ("Hola", nombre_usuario)
+
+saluda() """
+
+#Ejemplo parámetro como variables
+
+""" def doble(numero):
+    return numero + numero
+
+resultado_uno = doble(5)
+resultado_dos = doble(10)
+
+print(resultado_uno, resultado_dos)
+
+#Ejemplo pasar variables como argumento
+
+mi_numero = 7
+resultado = doble(mi_numero)
+print(resultado) """
+
+# USO DE RETURN
+
+def suma_sin_return(a, b):
+    resultado_tres = a + b #None
+
+resultado_suma_sin = suma_sin_return(10,5)
+print(resultado_suma_sin)
+
+def suma_con_return(a, b):
+    resultado_tres = a + b
+    return resultado_tres
+
+resultado_suma_con = suma_con_return(10,5)
+print(resultado_suma_con)
+
+#Ejemplos pero con resta
+#1
+def resta1(a, b):
+    return a - b
+print("La resta 1 es:",resta1(5,4))
+#2
+def resta2(a, b):
+    restatorio = a - b
+    print("La resta 2 es:",restatorio)
+    return (restatorio)
+res = resta2(5,2)
+#3
+def resta3(a, b):
+    print("La resta 3 es:",a-b)
+resta3(10,2)
+
+numero = 100 * resta1(10,5) #con resta3 daría error porque contienen strings
+print(numero)
+
+#Práctica rápida: crear un programa que le solicite al usuario su nombre y sus apellidos. A continuación, el programa ejecutará una función saludar() para saludar al usuario.
+#Siguiente: solicitamos el año de nacimiento, y a continuación el usuario le dirá al programa los años que tiene.
+
+nombre = str(input("Introduzca su nombre:"))
+apellidos = str(input("Introduzca sus apellidos:"))
+
+def saludar():
+    print("Hola",nombre,apellidos )
+
+saludar()
+
+anio_nacimiento = int(input("Introduzca su año de nacimiento:"))
+
+def edad():
+    print(f"Su edad es: {2024 - anio_nacimiento} años.")
+edad()
