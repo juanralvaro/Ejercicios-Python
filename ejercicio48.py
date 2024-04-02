@@ -20,6 +20,8 @@ The Art of Fiction: 8 ejemplar(es)
 History of World Wars: 12 ejemplar(es)
 Introduction to Poetry: 7 ejemplar(es)* """
 
+print("Bienvenido al gestor de diccionarios.")
+
 diccionario_libros = {"El Quijote" : 2, "La sombra del viento": 6, "Futbolísimos": 8, "Reina Roja": 1, "Fariña": 5}
 
 # Función para prestar un libro
@@ -53,3 +55,5 @@ def ver_inventario(diccionario_libros):
         print(clave,":",valor)
         
 ver_inventario(diccionario_libros)
+
+print("Gracias por usar el gestor de diccionarios.")
