@@ -17,25 +17,40 @@ El programa debe mostrar el resultado de cada operación.
 
 Recuerda agregar comentarios explicativos en tu código para guiar al lector a través de cada paso y función. """
 
+#Bienvenida
 print("Bienvenido al programa de operaciones.")
 
+#Introduccion números
 num1 = int(input("Introduce el primer número: "))
 num2 = int(input("Introduce el primer número: "))
 
+#Definir una suma
 def suma(num1, num2):
     return num1 + num2
 
+#Definir una resta
 def resta(num1, num2):
     return num1 - num2
 
+#Definir una multiplicacion
 def multiplicacion(num1, num2):
     return num1 * num2
 
+#Definir una division
 def division(num1, num2):
     return num1 / num2
 
+#Llamar a la suma
 suma(num1, num2)
+
+#Llamar a la resta
 resta(num1, num2)
+
+#Llamar a la multiplicación
 multiplicacion(num1, num2)
+
+#Llamar a la división
 division(num1, num2)
+
+#Imprimir las operaciones
 print("\nLa suma es: ", suma(num1, num2), "\nLa resta es: ", resta(num1, num2), "\nLa multiplicación es: ", multiplicacion(num1, num2), "\nLa división es: ", division(num1, num2))
