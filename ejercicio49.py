@@ -6,19 +6,24 @@
 4. Cuando la suma alcance o supere el límite introducido por el usuario, muestra un mensaje indicando que el límite ha sido alcanzado.
 5. Agradece al usuario por jugar a nuestro juego y deséale un buen día 😊. """
 
-print("Bienvenido al juego interactivo de suma.")
+#Lo que ya sabíamos pero encapsulado en una función a definir al principio e invocar al final:
 
-limite = int(input("Introduce una cantidad límite: "))
+def juego_suma_hasta_limite():
+    print("¡Bienvenido al juego de Suma hasta cierto límite!")
+    print("Elige un límite y trata de sumar números hasta alcanzarlo.")
 
-while True:
-    numero = int(input("Introduce un número: "))
-    suma = numero
-    while suma <= limite:
-        numero = int(input("Introduce un número: "))
-        suma += numero
-        print(f"La suma es {suma}")
-    else:
-        print("Ha alcanzado el límite.")
-        break
-    
-print("Gracias por jugar. ¡Buen día!")
+    limite = int(input("Introduce el límite deseado: "))
+    suma_actual = 0
+
+    while suma_actual < limite:
+        numero = int(input("Introduce un número para sumar: "))
+        suma_actual += numero
+
+        if suma_actual < limite:
+            print(f"Suma actual: {suma_actual}")
+        else:
+            print(f"¡Felicidades! Has alcanzado o superado el límite de {limite}.")
+    print("¡Gracias por jugar!")
+
+# Ejecutar el juego
+juego_suma_hasta_limite()
