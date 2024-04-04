@@ -1,5 +1,4 @@
-""" **HORA DE FINALIZACIÓN DEL EJERCICIO: 11: 48**
-
+"""
 **Objetivo:**
 Realizar una investigación detallada sobre la presencia y el papel de Python en el sector empresarial, así como su contribución al ámbito tecnológico.
 
