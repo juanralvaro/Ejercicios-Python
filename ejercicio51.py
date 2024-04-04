@@ -41,6 +41,7 @@ def verificar_divisibilidad(numero: int, divisores: list) -> bool:
             return "El número es divisible por al menos uno de los divisores"
     return "El número no es divisible por ninguno de los divisores"
     
+print(verificar_divisibilidad(6,divisores))
 print(verificar_divisibilidad(7,divisores))
 print(verificar_divisibilidad(8,divisores))
 print(verificar_divisibilidad(9,divisores))
