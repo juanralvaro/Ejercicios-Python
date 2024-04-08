@@ -26,6 +26,12 @@ suma_dos(10, 5)
 numero = 100 * sum
 print(numero) """
 
+#INCISO: Si una función no tiene un resultado que devolver, me va a devolver un None
+""" def Suma(a, b):
+    a + b"""
+
+
+
 #Ejemplo función saludar: Utilizar variables globales dentro de mi función.
 """ nombre_usuario = str(input("Ingrese su nombre: \n"))
 
@@ -270,7 +276,15 @@ print("Salario del Experto:", salario_experto) """
 #Definir la función que me permira calcular el sumatorio de los ingresos de todos los empleados
 def sumar_ingresos(*ingresos):
     total = sum(ingresos)
-    return total
+    return total"""
+    
+#INCISO: #Con la herramienta * hacemos que el argumento o los argumentos que lo paso a la función cuando la llamo se empaqueten en una tupla, de tal forma que yo le puedo pasar todos los argumentos que quiera. 
+"""
+def sumar_ingresos(*valores):
+    resultado = sum(valores)
+    print(resultado)
+
+sumar_ingresos(1500, 1500, 1500, 1500, 1500, 1500)
 
 #Pedir al usuario los salarios de sus empleados utilizando una estructura de control que le permita al usuario salir del bucle cuando haya introducido todos los datos.
 
