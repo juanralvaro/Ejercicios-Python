@@ -47,11 +47,11 @@ buscar_palabras_clave(mensaje3)
 #-- Resultado aplicando el retorno temprano --
 
 # Definir las palabras clave
-palabras_clave = ["secreto", "confidencial", "urgente", "importante"]
+palabras_clave1 = ["secreto", "confidencial", "urgente", "importante"]
 
 # Definir la función buscar_palabras_clave
-def buscar_palabras_clave(mensaje):
-    for palabra in palabras_clave:
+def buscar_palabras_clave1(mensaje):
+    for palabra in palabras_clave1:
         if palabra in mensaje:
             return "Se han encontrado palabras clave en el mensaje"
     return "No se han encontrado palabras clave en el mensaje"
@@ -62,21 +62,21 @@ mensaje2 = str(input("Ingresa una frase para evaluar:\n"))
 mensaje3 = str(input("Ingresa una frase para evaluar:\n"))
 
 print("Mensaje 1:")  
-buscar_palabras_clave(mensaje1)
+buscar_palabras_clave1(mensaje1)
 print("Mensaje 2:")  
-buscar_palabras_clave(mensaje2)
+buscar_palabras_clave1(mensaje2)
 print("Mensaje 3:") 
-buscar_palabras_clave(mensaje3)
+buscar_palabras_clave1(mensaje3)
 
 #-- Resultado aplicando el retorno condicional y mostrando al usuario todas las palabras que coinciden con las palabras clave  --
 
 # Definir las palabras clave
-palabras_clave = ["secreto", "confidencial", "urgente", "importante"]
+palabras_clave2 = ["secreto", "confidencial", "urgente", "importante"]
 
 # Definir la función buscar_palabras_clave
-def buscar_palabras_clave(mensaje):
+def buscar_palabras_clave2(mensaje):
     """Descripción:
-    buscar_palabras_clave _summary_
+    buscar_palabras_clave2 _summary_
 
     Argumentos de la función: 
         mensaje (_type_): _description_
@@ -85,7 +85,7 @@ def buscar_palabras_clave(mensaje):
         _type_: _description_
     """
     encontrado = []
-    for palabra in palabras_clave:
+    for palabra in palabras_clave2:
         if palabra in mensaje:
             encontrado.append(palabra)
     if len(encontrado) >= 1:
@@ -99,21 +99,21 @@ mensaje2 = str(input("Ingresa una frase para evaluar:\n"))
 mensaje3 = str(input("Ingresa una frase para evaluar:\n"))
 
 print("Mensaje 1:")  
-buscar_palabras_clave(mensaje1)
+buscar_palabras_clave2(mensaje1)
 print("Mensaje 2:")  
-buscar_palabras_clave(mensaje2)
+buscar_palabras_clave2(mensaje2)
 print("Mensaje 3:") 
-buscar_palabras_clave(mensaje3)
+buscar_palabras_clave2(mensaje3)
 
 #-- Resultado aplicando el retorno condicional y solo una palabra a evaluar en mi función--
 
 # Definir las palabras clave
-palabras_clave = ["secreto", "confidencial", "urgente", "importante"]
+palabras_clave3 = ["secreto", "confidencial", "urgente", "importante"]
 
 # Definir la función buscar_palabras_clave
-def buscar_palabras_clave(palabra):
+def buscar_palabras_clave3(palabra):
     """Descripción:
-    buscar_palabras_clave _summary_
+    buscar_palabras_clave3 _summary_
 
     Argumentos de la función: 
         mensaje (_type_): _description_
@@ -122,7 +122,7 @@ def buscar_palabras_clave(palabra):
         _type_: _description_
     """
 
-    if palabra in palabras_clave:
+    if palabra in palabras_clave2:
         return "Se han encontrado palabras clave en la palabra"
     else:
         return "No se han encontrado palabras clave en la palabra"
@@ -132,6 +132,6 @@ palabra1 = str(input("Ingresa una palabra para evaluar:\n"))
 palabra2 = str(input("Ingresa una palabra para evaluar:\n"))
 palabra3 = str(input("Ingresa una palabra para evaluar:\n"))
 
-print("palabra 1:", buscar_palabras_clave(palabra1))  
-print("palabra 2:", buscar_palabras_clave(palabra2))  
-print("palabra 3:", buscar_palabras_clave(palabra3)) 
+print("palabra 1:", buscar_palabras_clave3(palabra1))  
+print("palabra 2:", buscar_palabras_clave3(palabra2))  
+print("palabra 3:", buscar_palabras_clave3(palabra3))

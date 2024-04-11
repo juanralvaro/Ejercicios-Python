@@ -7,7 +7,7 @@ def suma(a: int, b: int) -> int:
     return resultado
 
 #PREGUNTA 2 - Opción incorrecta pero posible
-def suma_b(a: int, b: int) -> int:
+def suma_b(a: int, b: int) -> int: # type: ignore : aquí el error es intencionado
     resultado = a + b
     print(f"La sumatoria es: {resultado}") #La sumatoria es: 5
     
@@ -17,21 +17,22 @@ def resta(a: int, b: int) -> int:
     return resultado
 
 #PREGUNTA 4 - Opción correcta
-def Suma(a: int, b: int) -> int:
-    a + b #Si una función no tiene un resultado que devolver, me va a devolver un None
+def Suma(a: int, b: int) -> int: # type: ignore : aquí el error es intencionado
+    a + b # type: ignore : aquí el error es intencionado, quiero ver lo de la línea siguiente
+    #Si una función no tiene un resultado que devolver, me va a devolver un None
 
-#PREGUNTA 4 - Opción incorrecta pero posible
-def suma(a: int, b: int) -> int:
-    resultado = a + b
-    return resultado
-    
 #PREGUNTA 4 - Opción incorrecta pero posible
 def Suma_b(a: int, b: int) -> int:
     resultado = a + b
     return resultado
-
+    
 #PREGUNTA 4 - Opción incorrecta pero posible
 def Suma_c(a: int, b: int) -> int:
+    resultado = a + b
+    return resultado
+
+#PREGUNTA 4 - Opción incorrecta pero posible
+def Suma_d(a: int, b: int) -> int: # type: ignore : aquí el error es intencionado
     resultado = a + b
     print(f"La sumatoria es: {resultado}") #La sumatoria es: 5
     
@@ -59,8 +60,8 @@ def doble(a: int) -> int:
 #En Python, las listas pueden tener diferentes tipos de datos simultáneamente
 
 #PREGUNTA 9 - Opción correcta
-def suma_sin_return(a: int, b: int) -> int:
-    a + b
+def suma_sin_return(a: int, b: int) -> int: # type: ignore : aquí el error es intencionado
+    a + b # type: ignore : aquí el error es intencionado
     
 #PREGUNTA 10 - Opción correcta
 
@@ -93,7 +94,7 @@ def es_par(a: int) -> int:
 #print(es_par(7))
     
 #PREGUNTA 15 - Opción incorrecta pero posible
-def es_par2(a: int) -> int:
+def es_par2(a: int) -> int: # type: ignore : aquí el error es intencionado
     if a % 2 == 0:
         print(f"El número es par: True")
     else:
@@ -102,22 +103,22 @@ def es_par2(a: int) -> int:
 #es_par2(7)
     
 #PREGUNTA 15 - Opción incorrecta pero posible
-def es_par3(a: int) -> int:
+def es_par3(a: int) -> int: # type: ignore : aquí el error es intencionado
     if a % 2 == 0:
         print(f"El número es par: True")
 
 #print(es_par3(7))
 
 #PREGUNTA 16 - Opción correcta
-def dividir(a: int, b: int) -> int:
+def dividir(a: int, b: int) -> int: # type: ignore : aquí el error es intencionado
     if b == 0:
-        return "Error: no se puede dividir por cero"
+        print("Error: no se puede dividir por cero")
     else:
         resultado = a / b
         print(resultado)
         
 #PREGUNTA 16 - Opción incorrecta pero posible
-def dividir(a: int, b: int) -> int:
+def dividir2(a: int, b: int) -> int: # type: ignore : aquí el error es intencionado
     if b == 0:
         print("Error: no se puede dividir por cero")
     else:
@@ -144,3 +145,5 @@ def calcular_total(*numeros) -> int:
     return resultado
     
 print(calcular_total(10,20,30,40,50,60,70))
+
+dividir(10,0)
