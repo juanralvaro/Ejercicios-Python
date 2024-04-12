@@ -42,7 +42,7 @@ print("Número de teléfono de Luis:", agenda_telefonica.get("Luis"))
 print("Número de teléfono de Ana (no existe):", agenda_telefonica.get("Ana", "No encontrado"))
 
 # Paso 6: Eliminar un contacto con el método pop()
-telefono_pedro = agenda_telefonica.pop("Pedro")
+telefono_pedro = agenda_telefonica.pop("Pedro", "No encontrado")
 print("Teléfono de Pedro eliminado:", telefono_pedro)
 print("Diccionario después de eliminar a Pedro:", agenda_telefonica)
 
@@ -61,5 +61,5 @@ print("Valores en la agenda:", agenda_telefonica.values())
 print("Elementos en la agenda:", agenda_telefonica.items())
 
 # Paso 11: Comprobar si tenemos el teléfono de la profesora en la agenda
-telefono_profesora = agenda_telefonica.setdefault('Alejandra')
+telefono_profesora = agenda_telefonica.setdefault('Alejandra', "44444444")
 print("Teléfono profesora:", agenda_telefonica.items())

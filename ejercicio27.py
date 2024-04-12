@@ -45,10 +45,10 @@ diccionario_uno["Fecha de nacimiento"]= str(input("Introduzca la nueva fecha de 
 diccionario_uno["Ciudad de nacimiento"]= str(input("Introduzca la nueva ciudad de nacimiento: "))
 diccionario_uno["Nombre del padre"]= str(input("Introduzca el nuevo nombre del padre: "))
 diccionario_uno["Nombre de la madre"]= str(input("Introduzca el nuevo nombre de la madre: "))
-diccionario_dos["Número de DNI sin letra"] = int(input("Introduzca el nuevo número del DNI: "))
-diccionario_dos["Letra del DNI"] = str(input("Introduzca la nueva letra del DNI: "))
-diccionario_dos["Fecha de expedición"] = str(input("Introduzca la nueva fecha de expedición: "))
-diccionario_dos["Fecha de caducidad"] = str(input("Introduzca la nueva fecha de caducidad: "))
+diccionario_dos["Número de DNI sin letra"] = int(input("Introduzca el nuevo número del DNI: ")) # type: ignore
+diccionario_dos["Letra del DNI"] = str(input("Introduzca la nueva letra del DNI: ")) # type: ignore
+diccionario_dos["Fecha de expedición"] = str(input("Introduzca la nueva fecha de expedición: ")) # type: ignore
+diccionario_dos["Fecha de caducidad"] = str(input("Introduzca la nueva fecha de caducidad: ")) # type: ignore
 diccionario_tres["Nacionalidad"] = str(input("Introduzca la nueva nacionalidad: "))
 diccionario_tres["Domicilio"] = str(input("Introduzca el nuevo domicilio: "))
 

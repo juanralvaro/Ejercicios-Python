@@ -26,7 +26,7 @@ primer_indice_dieciocho = temperaturas.index(18)
 print("Primer índice valor 18:",primer_indice_dieciocho)
 
 #5. Crear tupla temperaturas_ordenadas
-ordenar_temperaturas = sorted(temperaturas)
+ordenar_temperaturas = sorted(temperaturas) # type: ignore
 temperaturas_ordenadas = tuple(ordenar_temperaturas)
 
 #6. Concatenar tupla original y ordenada
