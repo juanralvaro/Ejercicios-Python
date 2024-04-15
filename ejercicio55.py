@@ -24,66 +24,106 @@
     - Devolver un libro a la biblioteca.
     - Mostrar los libros prestados y a quién han sido prestados. """
     
+#SOLUCIÓN
+
 class Libro:
-    def __init__(self, titulo:str, autor:str, genero:str, usuario:str):
+    def __init__(self, titulo, autor, genero):
         self.titulo = titulo
         self.autor = autor
         self.genero = genero
-        self.usuario = ""
-     
+        self.usuario = None
+
     def prestar(self, usuario):
-        indice = []
-        if self.titulo in indice:
-            print(f"He prestado el libro {self.titulo} a {self.usuario}")
-        self.usuario = usuario
+        if self.usuario is None:
+            self.usuario = usuario
+            print(f"El libro '{self.titulo}' ha sido prestado a {usuario.nombre}.")
+            return True
+        else:
+            print(f"El libro '{self.titulo}' ya está prestado a {self.usuario.nombre}.")
+            return False
 
     def devolver(self):
-        self.usuario = None
-        
+        if self.usuario is not None:
+            print(f"El libro '{self.titulo}' ha sido devuelto.")
+            self.usuario = None
+        else:
+            print(f"El libro '{self.titulo}' no está prestado.")
+
 class Biblioteca:
     def __init__(self):
         self.libros_disponibles = []
         self.libros_prestados = []
-    
+
     def agregar_libro(self, libro):
-        agregar_libro = input("¿Desea agregar un libro? (s/n): ")
-        if agregar_libro == "s":
-            self.libros_disponibles.append(libro)
-    
+        self.libros_disponibles.append(libro)
+        print(f"El libro '{libro.titulo}' ha sido añadido a la biblioteca.")
+
     def mostrar_libros_disponibles(self):
-        for libro in self.libros_disponibles:
-            print(libro.titulo, libro.autor)
-    
+        print("Libros disponibles en la biblioteca:")
+        for i, libro in enumerate(self.libros_disponibles, start=1):
+            print(f"{i}. Título: {libro.titulo}, Autor: {libro.autor}, Género: {libro.genero}")
+
     def prestar_libro(self, indice, usuario):
-        for libro in self.libros_disponibles:
-            libro.prestar(usuario)
-            self.libros_prestados.append(libro)
-            self.libros_disponibles.remove(libro)
-        
+        if 0 < indice <= len(self.libros_disponibles):
+            libro = self.libros_disponibles[indice - 1]
+            if libro.prestar(usuario):
+                self.libros_disponibles.pop(indice - 1)
+                self.libros_prestados.append(libro)
+        else:
+            print("Índice de libro no válido.")
+
     def devolver_libro(self, indice):
-        for libro in self.libros_disponibles:
-            libro = self.libros_prestados[indice]
+        if 0 < indice <= len(self.libros_prestados):
+            libro = self.libros_prestados.pop(indice - 1)
             libro.devolver()
             self.libros_disponibles.append(libro)
-            self.libros_prestados.remove(libro)
-        
+        else:
+            print("Índice de libro no válido.")
+
 class Usuario:
-    def __init__(self, usuario):
-        self.usuario = usuario
-        
-usuario_uno = Usuario("Juan")
+    def __init__(self, nombre):
+        self.nombre = nombre
 
-usuario_dos = Usuario("Juan")
-
-libro_uno = Libro("El Quijote", "Cervantes", "Fantástico", usuario_uno)
-libro_dos = Libro("Yerma", "Lorca", "Drama", usuario_dos)
+# Crear una instancia de la biblioteca
 biblioteca = Biblioteca()
 
-biblioteca.agregar_libro(libro_uno)
-biblioteca.agregar_libro(libro_dos)
-biblioteca.mostrar_libros_disponibles()
+# Menú de opciones
+print("Bienvenido a la biblioteca.")
+print("Seleccione una opción:")
+print("1. Agregar un libro")
+print("2. Mostrar libros disponibles")
+print("3. Prestar un libro")
+print("4. Devolver un libro")
+print("5. Mostrar libros prestados")
+print("6. Salir")
 
-libro_uno.prestar(usuario_uno)
+while True:
+    opcion = input("Ingrese el número de la opción seleccionada: ")
 
-#biblioteca.prestar_libro(libro_dos, usuario_uno)
-biblioteca.mostrar_libros_disponibles()
+    if opcion == '1':
+        titulo = input("Ingrese el título del libro: ")
+        autor = input("Ingrese el autor del libro: ")
+        genero = input("Ingrese el género del libro: ")
+        nuevo_libro = Libro(titulo, autor, genero)
+        biblioteca.agregar_libro(nuevo_libro)
+    elif opcion == '2':
+        biblioteca.mostrar_libros_disponibles()
+    elif opcion == '3':
+        biblioteca.mostrar_libros_disponibles()
+        indice = int(input("Ingrese el número del libro que desea prestar: "))
+        nombre_usuario = input("Ingrese su nombre: ")
+        usuario = Usuario(nombre_usuario)
+        biblioteca.prestar_libro(indice, usuario)
+    elif opcion == '4':
+        biblioteca.mostrar_libros_disponibles()
+        indice = int(input("Ingrese el número del libro que desea devolver: "))
+        biblioteca.devolver_libro(indice)
+    elif opcion == '5':
+        print("Libros prestados:")
+        for i, libro in enumerate(biblioteca.libros_prestados, start=1):
+            print(f"{i}. Título: {libro.titulo}, Autor: {libro.autor}, Género: {libro.genero}, Prestado a: {libro.usuario.nombre}")
+    elif opcion == '6':
+        print("Saliendo del programa...")
+        break
+    else:
+        print("Opción no válida. Por favor, seleccione una opción válida.")

@@ -9,6 +9,7 @@ La clase **`Rectangulo`** debe tener los siguientes métodos de instancia:
 2. **`area(self)`**: Método que calcula y devuelve el área del rectángulo (base * altura).
 3. **`perimetro(self)`**: Método que calcula y devuelve el perímetro del rectángulo (2 * (base + altura)). """
 
+#Creamos la clase
 class Rectangulo:
     def __init__(self, base, altura):
         self.base = base
@@ -19,7 +20,10 @@ class Rectangulo:
 
     def perimetro(self):
         return 2 * (self.base + self.altura)
-    
+
+#Creamos una instancia de rectángulo
 rectangulo = Rectangulo(int(input("Introduzca la base del rectángulo: ")),int(input("Introduzca la altura del rectángulo: ")))
+
+#Imprimimos el área y el perímetro del rectángulo
 print(f"Área del rectángulo: {rectangulo.area()}")
 print(f"Perímetro del rectángulo: {rectangulo.perimetro()}")

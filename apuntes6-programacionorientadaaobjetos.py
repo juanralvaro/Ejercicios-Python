@@ -191,7 +191,7 @@ carlos.nacer()
 carlos.morir() """
 
 #EJERCICIO TRABAJADOR RESUELTO CON MÉTODOS DE CLASE
-class Trabajador:
+""" class Trabajador:
     def __init__(self, nombre, edad, salario):
         self.nombre = nombre
         self.edad = edad
@@ -234,7 +234,7 @@ while True:
     elif opcion == 2:
         Trabajador.mostrar_trabajador(trabajadores)
     elif opcion == 3:
-        break
+        break """
     
 #EJERCICIO TRABAJADOR RESUELTO CON MÉTODOS DE INSTANCIA
 """
@@ -302,7 +302,7 @@ class MiClase:
 --> Podré acceder a los atributos de la instancia utilizando 'self'
 """
 #EJEMPLO MÉTODO DE INSTANCIA
-class Persona:
+""" class Persona:
     def __init__(self, nombre, edad):
         self.nombre = nombre
         self.edad = edad
@@ -335,4 +335,98 @@ class Loteria:
 nuevo_valor = int(input("Introduce un nuevo coste del boleto en euros: "))
 Loteria.definir_nuevo_coste_boleto_euros(nuevo_valor)
 #Llamar al método de clase para calcular el área del círculo sin necesidad de crear previamente una instancia
-print(Loteria.calcular_coste_boletos(12))
+print(Loteria.calcular_coste_boletos(12)) """
+
+# CONTINUAMOS CON EL EJEMPLO BIBLIOTECA
+
+""" class Libro:
+    #Este atributo de clase hace referencia a todas las instancias que se creen de esta misma clase. Este valor es común para todas las instancias. 
+    cantidad_libros_en_biblioteca = 0
+    def __init__(self, titulo, autor, paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.paginas = paginas
+        #Cada vez que cree una instancia de la clase Linro, quiero que la cantidad de libros en biblioteca se incremente en 1
+        Libro.cantidad_libros_en_biblioteca += 1
+    
+    def mostrar_info(self):
+        print(f"Título: {self.titulo}")
+        print(f"Autor: {self.autor}")
+        print(f"Número de paginas: {self.paginas}\n") """
+
+""" #Creamos dos objetos de la clase Libro      
+libro_uno = Libro("El Alquimista", "Paulo Coehlo", 149)
+libro_dos = Libro("Juan Salvador Gaviota", "Nader El Yacoubi", 239)
+
+#Modifico el valor de un atributo en una instancia específica
+libro_uno.titulo = "Nuevo valor para el título del libro 1"
+
+#Mostrar la información de las instancias que he creado
+print("Información libro 1:\n")
+libro_uno.mostrar_info()
+
+print("Información libro 2:\n")
+libro_dos.mostrar_info()
+
+#Mostrar la cantidad actual de libros en mi biblioteca
+print(f"La cantidad actual de libros es: {Libro.cantidad_libros_en_biblioteca}")
+
+#Creo un nuevo objeto de la clase Libro
+libro_tres = Libro("Python essentials", "Guido Van Rossum", 698)
+
+#Mostrar la cantidad actual de libros en mi biblioteca
+print(f"La cantidad actual de libros es: {Libro.cantidad_libros_en_biblioteca}")"""
+
+class Coche:
+    #Atributo de clase
+    cantidad_coches = 0
+    
+    def __init__(self, marca, modelo):
+        #Atributos de instancia
+        self.marca = marca
+        self.modelo = modelo
+        #Incrementar la cantidad de coches cada vez que se cree una instancia
+        Coche.cantidad_coches += 1
+    
+    def __str__(self): #Me sirve para formatear la representación de los objetos
+        return f"Nuevo coche de la marca {self.marca} - {self.modelo}"
+    
+    def mostrar_info(self):
+        print(f"Marca: {self.marca}, modelo: {self.modelo}")
+        
+coche_david = Coche("Ferrari", "python")
+coche_justo = Coche("LandRover", "freelander")
+
+concesionario = [coche_david, coche_justo]
+
+print(f"La cantidad de coches que existen es: {Coche.cantidad_coches} ")
+
+for _ in concesionario:
+    print(_)
+
+coche_david.mostrar_info()
+coche_justo.mostrar_info()
+class Usuario:
+    usuarios = 0
+    
+    def __init__(self, nombre, apellido, edad):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.edad = edad
+        Usuario.usuarios += 1
+
+    def __str__(self):
+        return f"Usuario: {self.nombre} {self.apellido}. Edad: {self.edad}."
+        
+    def mostrar_info(self):
+        print(f"Nombre: {self.nombre}")
+        print(f"Apellido: {self.apellido}")
+
+usuario_uno = Usuario("Juan","Pérez",40)
+usuario_dos = Usuario("María","Gómez",30)
+usuario_tres = Usuario("Pedro","Pérez",20)
+        
+lista_usuarios = [usuario_uno,usuario_dos,usuario_tres]
+
+for usuario in lista_usuarios:
+    print(usuario)

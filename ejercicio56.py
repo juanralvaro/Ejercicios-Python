@@ -35,8 +35,11 @@ class Producto:
         self.stock += cantidad
         
     def vender_stock(self, cantidad):
-        self.stock -= cantidad
-        return self.precio * cantidad
+        if self.stock >= cantidad:
+            self.stock -= cantidad
+            return self.precio * cantidad
+        else:
+            return "No hay stock suficiente"
     
 class Tienda:
     def __init__(self):
@@ -52,34 +55,55 @@ class Tienda:
     def buscar_producto(self, nombre):
         for producto in self.productos:
             if producto.nombre == nombre:
-                return producto.mostrar_informacion()
+                return producto
         return "No se encontró el producto"
     
     def vender_producto(self, nombre, cantidad):
         for producto in self.productos:
             if producto.nombre == nombre:
                 if producto.stock >= cantidad:
-                    producto.vender_stock(cantidad)
-                    return producto.vender_stock(cantidad)
+                    cantidad_vendida = producto.vender_stock(cantidad)
+                    monto = cantidad_vendida * precio
+                    return monto
                 else:
                     return "No hay stock suficiente"
-                
-producto_uno = Producto("Coca-Cola", 1, 200)
-producto_dos = Producto("Kilo de carne", 6.95, 55)
-producto_tres = Producto("Televisor", 200, 15)
 
-tienda_uno = Tienda
+#Creación de la tienda
+tienda = Tienda()
 
-num_productos = int(input("Ingrese el número de productos a agregar: "))
-for _ in range(num_productos):
-    producto = str(input("Ingrese un producto: "))
-    tienda_uno.agregar_producto(producto)
+#Menú de opciones
+print("Bienvenido a la tienda.")
+print("Seleccione una opción:")
+print("1. Introducir un producto y agregarlo a la tienda")
+print("2. Mostrar productos disponibles")
+print("3. Buscar un producto y mostrar su información")
+print("4. Vender un producto y mostrar el monto de la venta")
+print("5. Salir")
 
-producto_uno.mostrar_informacion()
-producto_dos.mostrar_informacion()
-producto_tres.mostrar_informacion()
-
-tienda_uno.buscar_producto("Televisor")
-
-tienda_uno.vender_producto("Kilo de carne", 4)
-print(f"Coste del producto: {producto_tres.precio * 4}")
+while True:
+    opcion = input("Ingrese el número de la opción seleccionada: ")
+    if opcion == '1':
+        nombre = input("Ingrese el nombre del producto: ")
+        precio = input("Ingrese el precio del producto: ")
+        stock = input("Ingrese el stock del producto: ")
+        nuevo_producto = Producto(nombre, precio, stock)
+        tienda.agregar_producto(nuevo_producto)
+    elif opcion == '2':
+        tienda.mostrar_productos()
+    elif opcion == '3':
+        producto_buscado = str(input("Ingrese el producto a buscar: "))
+        producto_encontrado = tienda.buscar_producto(producto_buscado)
+        if producto_encontrado:
+            producto_encontrado.mostrar_informacion(f"{producto.nombre}, {producto.precio}, {producto.stock}")
+        else:
+            print("El producto no existe")
+    elif opcion == '4':
+        print("Venta de producto:")
+        producto = str(input("Ingrese el nombre del producto que desea comprar: "))
+        producto.stock = int(input("Ingrese el stock del producto que desea comprar: "))
+        tienda.vender_producto(Producto)
+    elif opcion == '5':
+        print("Saliendo del programa...")
+        break
+    else:
+        print("Opción no válida. Por favor, seleccione una opción válida.")

@@ -25,7 +25,7 @@ class Estudiante:
         self.asistencia = 0
         self.calificaciones = []
         
-    def registrar_asistencia(self): #cada día de asistencia suma uno a la cuenta
+    def registrar_asistencia(self):  # cada día de asistencia suma uno a la cuenta
         self.asistencia += 1
             
     def agregar_calificacion(self, calificacion): #se añade una calificación a la lista de calificaciones
