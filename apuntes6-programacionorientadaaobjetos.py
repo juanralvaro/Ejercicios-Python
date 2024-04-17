@@ -377,7 +377,7 @@ libro_tres = Libro("Python essentials", "Guido Van Rossum", 698)
 #Mostrar la cantidad actual de libros en mi biblioteca
 print(f"La cantidad actual de libros es: {Libro.cantidad_libros_en_biblioteca}")"""
 
-class Coche:
+""" class Coche:
     #Atributo de clase
     cantidad_coches = 0
     
@@ -429,4 +429,62 @@ usuario_tres = Usuario("Pedro","Pérez",20)
 lista_usuarios = [usuario_uno,usuario_dos,usuario_tres]
 
 for usuario in lista_usuarios:
-    print(usuario)
+    print(usuario) """
+    
+# POO - HERENCIA ****************************************
+""" 
+· Podemos crear nuevas clases a partir de clases ya existentes. 
+· Nos permite que una clase (subclase o clase derivada) herede tanto atributos como métodos de otra clase (superclase o clase base)
+· La herencia facilita la reutilización del código y la creación de jerarquías de clases --> Tratamos de promover en todo caso un diseño modular y extensible
+
+"""
+#Defino una clase --> SUPERCLASE O CLASE BASE
+class Animal:
+    tipo = "Mamífero"
+    bigotes = "largos y sensibles"
+    #Métodos
+    pass
+
+#Defino una clase --> SUBCLASE O CLASE DERIVADA
+class Perro(Animal):
+    #hereda tipo = "Mamífero"
+    bigotes = "" #Puedo sobreescribir un atributo heredado de la clase base.
+    sonido = "ladrar"
+    pass
+
+class Chihuahua(Perro):
+    #hereda tipo = "Mamífero"
+    #hereda sonido = "ladrar"
+    #hereda bigotes = ""
+    pass
+
+class Gato(Animal):
+    #hereda tipo = "Mamífero"
+    #hereda bigotes = "largos y sensibles"
+    sonido = "maullar"
+    pass
+
+#EJEMPLO 1 de CLASES HEREDADAS
+
+#Definimos una CLASE BASE Vehículo que contenga atributos de instancia y métodos de instancia
+class Vehiculo:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+        
+    def mostrar_informacion(self):
+        print(f"Marca: {self.marca} - Modelo: {self.modelo}")
+
+#Definimos una CLASE DERIVADA Coche, que herede los atributos de instancia de la clase base y además añada nuevos atributos. 
+class Coche(Vehiculo):
+    def __init__(self, marca, modelo, color):
+        super().__init__(marca, modelo) #Llamamos al constructor de la clase base para inicializar los atributos de la propia clase. La función super() me permite acceder a los métodos (de clase y de instancia) de la clase padre desde una de sus clases hijas. 
+        self.color = color
+        
+    def mostrar_informacion(self):
+        super().mostrar_informacion()
+        print(f"Color: {self.color}")
+        
+coche_uno = Coche("Land Rover","Freelander","Gris")
+
+Coche.mostrar_informacion(coche_uno)
