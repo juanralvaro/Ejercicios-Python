@@ -486,5 +486,96 @@ class Coche(Vehiculo):
         print(f"Color: {self.color}")
         
 coche_uno = Coche("Land Rover","Freelander","Gris")
+#Coche.mostrar_informacion(coche_uno)
 
-Coche.mostrar_informacion(coche_uno)
+#ATRIBUTO ESPECIAL __BASE__: Proporciona una referencia de la clase de la cual es derivada. Es decir, me dice quien es su clase padre. En el caso de que no tenga una clase padre, nos remite a un valor object (la base de todas las clases en Python)
+
+""" print(Chihuahua.__base__)
+print(Perro.__base__)
+print(Animal.__base__) """
+
+
+#ATRIBUTO ESPECIAL __SUBCLASSES__(): Obtengo una lista de todas las clases derivadas de una clase base.
+""" print(Animal.__subclasses__())
+print(Perro.__subclasses__()) """
+
+""" print(f"La clase base de Chihuahua es: {Chihuahua.__base__}")
+print(f"La clase base de Perro es: {Perro.__base__}")
+print(f"La clase base de Animal es: {Animal.__base__}") """
+
+
+
+#ATRIBUTO ESPECIAL __MRO__: Method Resolution Order (Orden de Resolución de Métodos). Devuelve una tupla que nos muestra el orden en el que las clases se van a buscar en mi jerarquía de clases a la hora de resolver atributos y métodos en una instancia. 
+
+""" print(Chihuahua.__mro__)
+print("*" * 100)
+print(Perro.__mro__)
+print("*" * 100)
+print(Animal.__mro__)
+print("*" * 100) """
+
+#EJEMPLO
+
+class A:
+    nivel_a = 1
+    def __init__(self):
+        return self.nivel_a
+class B(A):
+    nivel_b = 2
+    def __init__(self):
+        return self.nivel_b
+class C(B):
+    nivel_c = 3
+    def __init__(self):
+        return self.nivel_c
+
+class D(C):
+    nivel_d = 4
+    def __init__(self):
+        return self.nivel_d
+
+#Ejemplo de uso de __mro__:
+
+""" print(D.__mro__)
+print("*" * 106)
+print(C.__mro__)
+print("*" * 84)
+print(B.__mro__)
+print("*" * 62)
+print(A.__mro__)
+print("*" * 40) """
+
+class Doc:
+    """
+    sumary_line
+    
+    Keyword arguments:
+    argument -- description
+    Return: return_description
+    """
+    pass
+
+#print(Doc.__doc__)
+
+"""OTROS ATRIBUTOS ESPECIALES COMUNES"""
+
+#Atributo __doc__: Este atributo va a devolver toda la documentación asociada con una clase.
+class Documentacion:
+    """
+    Nombre de la clase: Documentacion
+        Descripción:
+        Esta clase se ha definido para documentar y explicar el uso del atributo especial __doc__
+    """
+    pass
+
+#print(Documentacion.__doc__)
+
+#Atributo __dict__: Este atributo nos devuelve un diccionario que contiene los atributos de la instancia de la clase, incluídos los métodos. CLAVE (nombres de los atributos) - VALOR (valores de los atributos)
+
+""" print(Perro.__dict__) #Nos muestra un diccionario que contiene los atributos de la instancia de la clases dada, en este caso, Perro.
+
+print("Este documento recoge la clase Animal, y las clases derivadas de la class Animal.\nINDICE\n \n- Class Animal" , Animal.__mro__ , "\n  Atributos que contiene:", Animal.__dict__, "\n\n   - Class Perro", Perro.__mro__ , "\n\n        -Class Chihuahua" , Chihuahua.__mro__ ,  "\n Atributos que contiene:", Chihuahua.__dict__, "\n\n  - Class Gato" , Gato.__mro__ , "\n Atributos que contiene:", Gato.__dict__) """
+
+""" A partir del ejemplo de las clases A, B, C y D vas a mostrar la documentación de estas clases, la jerarquía de clases de las que derivan y además los atrubitos de instancia y los métodos de la clase"""
+
+print("\nDOCUMENTO 'GLOBAL':\n\nEste documento recoge por un lado la clase A, y por otro sus clases derivadas: B, C y D.\n\nÍNDICE: \n \n - Clase A", A.__mro__ , "\n   Atributos que contiene:\n  ", A.__dict__, "\n\n     - Clase B", B.__mro__, "\n       Atributos que contiene:\n      ",B.__dict__, "\n\n         - Clase C", C.__mro__, "\n           Atributos que contiene:\n          ", C.__dict__,"\n\n             - Clase D: ", D.__mro__, "\n               Atributos que contiene:\n              ", D.__dict__,"\n") 
