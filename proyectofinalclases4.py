@@ -1,10 +1,10 @@
+from datetime import date
+
 class Usuario:
-    def __init__(self, id: str, nombre: str, apellido_uno: str, apellido_dos: str, edad: int, direccion: str, localidad: str, provincia: str, telefono: str, email: str) -> None:
-        """
+    """
         1. Objetivo de la función: define los datos personales de un usuario.
         
         2. Parámetros:
-        - self: permite acceder a los métodos y atributos de la propia clase.
         - id (str): es la id del usuario.
         - nombre (str): es el nombre o nombres del usuario.
         - apellido_uno (str): es el primer apellido del usuario.
@@ -19,7 +19,8 @@ class Usuario:
         3. Retorna: no retorna nada.
 
     """
-        self.id = id
+    def __init__(self, id_usuario: str, nombre: str, apellido_uno: str, apellido_dos: str, edad: int, direccion: str, localidad: str, provincia: str, telefono: str, email: str) -> None:
+        self.id_usuario = id_usuario
         self.nombre = nombre
         self.apellido_uno = apellido_uno
         self.apellido_dos = apellido_dos
@@ -30,103 +31,143 @@ class Usuario:
         self.telefono = telefono
         self.email = email
 
-    
-    def realizar_puja(self, producto, cantidad):
-        """
-        Método para que el usuario realice una puja por un producto.
-
-        Args:
-        - producto: Producto por el que se desea pujar.
-        - cantidad: Cantidad de productos a pujar.
-        """
-        pass
-    
-    def realizar_compra(self, producto, cantidad):
-        """
-        Método para que el usuario realice una compra de un producto.
-
-        Args:
-        - producto: Producto que se desea comprar.
-        - cantidad: Cantidad de productos a comprar.
-        """
-        pass
-    
-    def alta_socio(self, socio):
-        """
-        Método para que el administrador dé de alta un socio.
-
-        Args:
-        - socio: Socio que se va a dar de alta.
-        """
-        pass
-    
-    def baja_socio(self, socio):
-        """
-        Método para que el administrador dé de baja un socio.
-
-        Args:
-        - socio: Socio que se va a dar de baja.
-        """
-        pass
-    
-    def seleccion_producto(self, producto):
-        """
-        Método para que el administrador seleccione un producto.
-
-        Args:
-        - producto: Producto que se va a seleccionar.
-        """
-        pass
-
 class Socio(Usuario):
-    def __init__(self, identificador, fondo_individual, avatar):
+    socios = []
+    def __init__(self, id_usuario: int, fondo_individual: int, avatar: str) -> None:
         """
-        Constructor de la clase Socio.
+        1: Objetivo de la función: definir las características de un socio.
 
-        Args:
-        - identificador: Identificador único del socio.
-        - fondo_individual: Fondo individual del socio.
-        - avatar: Avatar del socio.
+        2. Parámetros:
+        - id_usuario (int): Identificador único del socio.
+        - fondo_individual (int): Fondo individual del socio.
+        - avatar (str): Avatar del socio.
+        Métodos:
+        - Se heredan algunos métodos de la clase Usuario.
+        
+        3. Retorna: nada.
         """
-        super().__init__(identificador)
+        super().__init__(id_usuario)
         self.fondo_individual = fondo_individual
         self.avatar = avatar
         self.conexion_app = None
     
-    def conectar_app(self, app):
+    def conectar_app(self, conexion_app: bool) -> None:
         """
-        Método para que el socio se conecte a la aplicación.
+        1. Objetivo: Conectar con la app de TechCashClub.
+
+        2. Argumentos:
+        - conexion_app (bool): conecta con la app de TechCashClub.
+        
+        3. Retorna: nada.
+        """
+        self.conexion_app = conexion_app
+
+    def realizar_puja(self, producto: str, cantidad: int) -> bool:
+        """
+        1. Objetivo: Método para que el usuario realice una puja por un producto.
+
+        Parámetros:
+        - producto (Producto): Producto por el que se desea pujar.
+        - cantidad (int): Cantidad de productos a pujar.
+        
+        Returns:
+        - True si la puja fue realizada con éxito, False en caso contrario.
+        """
+        if Socio.id_usuario == True:
+            cantidad_a_pujar = int(input("Introduzca la cantidad a pujar: "))
+    
+    def realizar_compra(self, producto: 'Producto', cantidad: int) -> bool:
+        """
+        Método para que el usuario realice una compra de un producto.
 
         Args:
-        - app: Aplicación a la que se va a conectar el socio.
+        - producto (Producto): Producto que se desea comprar.
+        - cantidad (int): Cantidad de productos a comprar.
+        
+        Returns:
+        - True si la compra fue realizada con éxito, False en caso contrario.
         """
-        self.conexion_app = app
+        for producto in Producto.productos:
+            if producto.stock >= cantidad:
+                producto.stock -= cantidad
+                producto.vender_stock(cantidad)
+                return "Se han vendido  "+ str(cantidad) + " unidades de " + producto.nombre + "."
+            else:
+                return "No hay stock suficiente"
 
 class Administrador(Usuario):
-    def __init__(self, identificador):
+    administradores = []
+    def __init__(self, id_usuario: int) -> None:
         """
-        Constructor de la clase Administrador.
+        1: Objetivo de la función: definir las características de un administrador y abrir una lista de socios.
 
-        Args:
-        - identificador: Identificador único del administrador.
+        2. Parámetros:
+        - id_usuario (int): Identificador único del administrador.
+        
+        Métodos:
+        - Se heredan algunos métodos de la clase Usuario.
+        
+        3. Retorna: nada.
         """
-        super().__init__(identificador)
+        super().__init__(id_usuario)
 
+    def alta_socio(self, socio: Socio) -> None:
+        """
+        1: Objetivo de la función: Método para dar de alta un socio en el club.
+
+        2. Parámetros:
+        - socio (Socio): Socio al que se va a dar de alta.
+        Métodos:
+        - Añade al socio a la lista de socios.
+        
+        3. Retorna: nada.
+        """
+        self.socios.append(socio)
+
+    def baja_socio(self, socio: Socio) -> None:
+        """
+        1: Objetivo de la función: Método para dar de baja un socio en el club.
+
+        2. Parámetros:
+        - socio (Socio): Socio al que se va a dar de baja.
+        Métodos:
+        - Elimina al socio de la lista de socios.
+        
+        3. Retorna: nada.
+        """
+        self.socios.remove(socio)
+
+    def seleccion_producto(self, producto: 'Producto') -> str:
+        """
+        1. Objetivo: que el administrador seleccione un producto para ofrecer en el club.
+
+        2. Parámetros:
+        - producto (Producto): Producto que se va a seleccionar.
+        Métodos:
+        - Busca el producto en la lista de productos.
+        """
+        for producto in Producto.productos:
+            if producto.nombre == producto:
+                return "Está el producto seleccionado."
+        return "El producto que buscaba no está en la lista."
 
 class Producto:
-    def __init__(self, identificador, nombre, precio, caracteristicas, imagenes, stock):
+    productos = []
+    def __init__(self, id_producto: int, nombre: str, precio: float, caracteristicas: str, imagenes: str, stock: int) -> None:
         """
-        Constructor de la clase Producto.
+        1: Objetivo de la función: definir las características de un producto.
 
-        Args:
-        - identificador: Identificador único del producto.
-        - nombre: Nombre del producto.
-        - precio: Precio del producto.
-        - caracteristicas: Características técnicas del producto.
-        - imagenes: Lista de imágenes del producto.
-        - stock: Cantidad disponible en stock del producto.
+        2. Parámetros:
+        - id_producto (int): Identificador único del producto.
+        - nombre (str): Nombre del producto.
+        - precio (int): Precio del producto.
+        - características (str): Características del producto.
+        - imagenes (str): Imágenes del producto.
+        - stock (int): stock del producto.
+        
+        3. Retorna: nada.
         """
-        self.identificador = identificador
+        self.id_producto = id_producto
         self.nombre = nombre
         self.precio = precio
         self.caracteristicas = caracteristicas
@@ -134,96 +175,68 @@ class Producto:
         self.stock = stock
 
 class VentanaTemporal:
-    def __init__(self, identificador, fecha_inicio, fecha_fin):
+    def __init__(self, id_ventana_temporal: int, fecha_inicio: date, fecha_fin: date) -> None:
         """
-        Constructor de la clase VentanaTemporal.
+        1: Objetivo de la función: abrir una ventana temporal.
 
-        Args:
-        - identificador: Identificador único de la ventana temporal.
-        - fecha_inicio: Fecha de inicio de la ventana temporal.
-        - fecha_fin: Fecha de fin de la ventana temporal.
+        2. Parámetros:
+        - id_ventana_temporal (int): Identificador único del producto.
+        - fecha_inicio (date): Inicio de la ventana temporal.
+        - fecha_fin (date): Final de la ventana temporal.
+        
+        3. Retorna: nada.
         """
-        self.identificador = identificador
+        self.id_ventana_temporal = id_ventana_temporal
         self.fecha_inicio = fecha_inicio
         self.fecha_fin = fecha_fin
 
 class Transaccion:
-    def __init__(self, identificador, pago, descuento_oferta, confirmacion_aceptado, fecha_entrega):
+    def __init__(self, id_transaccion: int, metodo_pago: int, descuento_oferta: float, confirmacion_aceptada: bool, fecha_entrega: date) -> None:
         """
-        Constructor de la clase Transaccion.
+        1: Objetivo: detalla una transacción.
 
-        Args:
-        - identificador: Identificador único de la transacción.
-        - pago: Método de pago utilizado en la transacción.
-        - descuento_oferta: Descuento u oferta aplicada a la transacción.
-        - confirmacion_aceptado: Confirmación de si la transacción fue aceptada o no.
-        - fecha_entrega: Fecha de entrega de la transacción.
+        2. Parámetros
+        - id_transaccion (int) : Identificador único de la transacción.
+        - metodo_pago (int): Método de pago utilizado en la transacción.
+        - descuento_oferta (float): Descuento u oferta aplicada a la transacción.
+        - confirmacion_aceptada (bool): Confirmación de si la transacción fue aceptada o no.
+        - fecha_entrega (date): Fecha de entrega de la transacción.
+        
+        3. Retorna: nada.
         """
-        self.identificador = identificador
-        self.pago = pago
+        self.id_transaccion = id_transaccion
+        self.metodo_pago = metodo_pago
         self.descuento_oferta = descuento_oferta
-        self.confirmacion_aceptado = confirmacion_aceptado
+        self.confirmacion_aceptada = confirmacion_aceptada
         self.fecha_entrega = fecha_entrega
 
 class Puja:
-    def __init__(self, fecha_inicio, fecha_fin):
+    def __init__(self, fecha_inicio: date, fecha_fin: date) -> None:
         """
-        Constructor de la clase Puja.
+        1: Objetivo: detalla una puja.
 
-        Args:
-        - fecha_inicio: Fecha de inicio de la puja.
-        - fecha_fin: Fecha de finalización de la puja.
+        2. Parámetros:
+        - fecha_inicio (date): Fecha de inicio de la puja.
+        - fecha_fin (date): Fecha de finalización de la puja.
+        
+        3. Retorna: nada.
         """
         self.fecha_inicio = fecha_inicio
         self.fecha_fin = fecha_fin
 
-class Administrador(Usuario):
-    def __init__(self, identificador):
-        """
-        Constructor de la clase Administrador.
-
-        Args:
-        - identificador: Identificador único del administrador.
-        """
-        super().__init__(identificador)
-    
-    def alta_socio(self, socio):
-        """
-        Método para dar de alta un socio en el club.
-
-        Args:
-        - socio: Socio que se va a dar de alta.
-        """
-        self.socios.append(socio)
-    
-    def baja_socio(self, socio):
-        """
-        Método para dar de baja un socio en el club.
-
-        Args:
-        - socio: Socio que se va a dar de baja.
-        """
-        self.socios.remove(socio)
-    
-    def seleccion_producto(self, producto):
-        """
-        Método para que el administrador seleccione un producto para ofrecer en el club.
-
-        Args:
-        - producto: Producto que se va a seleccionar.
-        """
-        pass
-
 class Fabricante:
-    def __init__(self, empresa, direccion, producto, oferta_especial):
+    def __init__(self, empresa: str, direccion: str, producto: Producto, oferta_especial: float) -> None:
         """
-        Constructor de la clase Fabricante.
+        1: Objetivo de la función: definir las características de un fabricante.
 
-        Args:
-        - empresa: Nombre de la empresa del fabricante.
-        - direccion: Dirección del fabricante.
-        - producto: Producto fabricado por el fabricante.
-        - oferta_especial: Oferta especial proporcionada por el fabricante.
+        2. Parámetros:
+        - empresa (str): Nombre del fabricante.
+        - direccion_empresa (str): Dirección de la empresa.
+        - producto (Producto): Producto fabricado.
+        - oferta_especial (float): Descuento por oferta especial
+        - stock (int): stock del producto.
+        
+        3. Retorna: nada.
         """
         self.empresa = empresa
         self.direccion = direccion
@@ -231,14 +244,16 @@ class Fabricante:
         self.oferta_especial = oferta_especial
 
 class Contabilidad:
-    def __init__(self, fondo_individual, fondo_comun, comision):
+    def __init__(self, fondo_individual: int, fondo_comun: int, comision: float) -> None:
         """
-        Constructor de la clase Contabilidad.
+        1: Objetivo de la función: almacena la contabilidad de una empresa.
 
-        Args:
-        - fondo_individual: Fondo individual del club de socios.
-        - fondo_comun: Fondo común del club de socios.
-        - comision: Comisión aplicada a las transacciones.
+        2. Parámetros:
+        - fondo_individual (int): Fondo a aportar por los socios.
+        - fondo_comun (int): Fondo acumulado
+        - comision (float): Porcentaje de comisión.
+        
+        3. Retorna: nada.
         """
         self.fondo_individual = fondo_individual
         self.fondo_comun = fondo_comun
