@@ -1,4 +1,4 @@
-""" - 59- Reto de programación III - Luchando por elegir puesto en exposición de proyecto
+""" - 59- Reto de programación III
     
     **Objetivo:**
     El objetivo de este ejercicio es que cada grupo de estudiantes plantee un programa de Python que incluya fallos de sintaxis, de concepto y de estilo. Los demás grupos deberán resolver los desafíos planteados por los otros grupos.
