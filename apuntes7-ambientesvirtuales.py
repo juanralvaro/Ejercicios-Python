@@ -1,4 +1,4 @@
-AMBIENTES VIRTUALES EN PYTHON
+""" AMBIENTES VIRTUALES EN PYTHON
 Navegar con bash hasta la carpeta del proyecto
 Ejecutar en terminal: python3 -m venv nombre_del_entorno para crear el entorno virtual #nombre_del_entorno: por defecto aparecerá \venv si lo creas por la barra izquierda pero puede ser cualquiera
 Ejecutar en terminal: source nombre_del_entorno/bin/activate (MAC/LINUX) o nombre_del_entorno\Scripts\activate (WINDOWS) para activar el entorno virtual
@@ -18,7 +18,6 @@ documentacion.py
 #Ignora directorios
 info_extra/
 
-"""
 AMBIENTE VIRTUAL: Entorno de desarrollo aislado, que me va a permitir gestionar de forma independiente las dependencias de un proyecto. 
     · Garantiza la coherencia de las bibliotecas instaladas.
     · Garantiza la independencia de las bibliotecas instaladas.
@@ -67,4 +66,3 @@ Proyecto:
     test/
     
 """
-
