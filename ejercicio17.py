@@ -1,1 +1,0 @@
-#Ejercicio interno de Busca el fallo, sólo en notion
